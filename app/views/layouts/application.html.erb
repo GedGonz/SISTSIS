@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SISTSIS</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+<%= custom_bootstrap_flash %>
+</head>
+<header>
+	<div id="Header">
+
+		<div class="row" id="rowheader">
+			<div id="contCol">
+				<div class="col-md-1" >
+					<%= image_tag "logoUni.png", :alt => "logoUni",:class=>"Log", :title => "logoUni"%>
+				</div>
+				<div class="col-md-6">
+					<h3 class="Titulo1">Universidad Nacional de Ingenieria</h3>
+				</div>
+				<div class="col-md-4">
+					<h3 class="Titulo2">Tecnico Superiro en Informatica y Sistemas</h3>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+	<div class="Menu">
+		
+		<nav class="navbar navbar-default" role="navigation">
+		  <!-- El logotipo y el icono que despliega el menú se agrupan
+		       para mostrarlos mejor en los dispositivos móviles -->
+		  <div class="navbar-header">
+		    <button type="button" class="navbar-toggle" data-toggle="collapse"
+		            data-target=".navbar-ex1-collapse">
+		      <span class="sr-only">Desplegar navegación</span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </button>
+		    <a class="navbar-brand" href="#">UNI-TSIS</a>
+		  </div>
+		 
+		  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+		       otro elemento que se pueda ocultar al minimizar la barra -->
+		  <div class="collapse navbar-collapse navbar-ex1-collapse">
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="#">Enlace #1</a></li>
+		      <li><a href="#">Enlace #2</a></li>
+		      <li class="dropdown">
+		        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		          Menú #1 <b class="caret"></b>
+		        </a>
+		        <ul class="dropdown-menu">
+		          <li><a href="#">Acción #1</a></li>
+		          <li><a href="#">Acción #2</a></li>
+		          <li><a href="#">Acción #3</a></li>
+		          <li class="divider"></li>
+		          <li><a href="#">Acción #4</a></li>
+		          <li class="divider"></li>
+		          <li><a href="#">Acción #5</a></li>
+		        </ul>
+		      </li>
+		    </ul>
+		 
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a href="#">Enlace #3</a></li>
+		      <li class="dropdown">
+		        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		          Menú #2 <b class="caret"></b>
+		        </a>
+		        <ul class="dropdown-menu">
+		          <li><a href="#">Acción #1</a></li>
+		          <li><a href="#">Acción #2</a></li>
+
+		        </ul>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+
+	</div>
+</header>
+<body>
+
+<%= yield %>
+
+</body>
+<footer>
+			<p style="text-align:center; margin-top:1em;">Copyright © 2016 by UNI<span style="text-align:center; margin-top:0.5em;"><br />Universidad Nacional de Ingenieria</span></p>
+    		<p style="text-align:center; margin-top:2em;"></p>
+</footer>
+</html>

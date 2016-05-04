@@ -1,2 +1,2 @@
 # SISTSIS
-pProyecto tsis
+Proyecto tsis

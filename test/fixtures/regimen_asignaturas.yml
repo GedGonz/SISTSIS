@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Asignatura_id: 
+  Regimen_id: 
+  Codigo: MyString
+  Hrsemana: 1
+  Hrtotales: 1
+  Estado: 1
+  Planestudio: MyString
+
+two:
+  Asignatura_id: 
+  Regimen_id: 
+  Codigo: MyString
+  Hrsemana: 1
+  Hrtotales: 1
+  Estado: 1
+  Planestudio: MyString

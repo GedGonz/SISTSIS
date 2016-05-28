@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Persona_id: 
+  Estudiante_id: 
+  Parentesco: MyString
+
+two:
+  Persona_id: 
+  Estudiante_id: 
+  Parentesco: MyString

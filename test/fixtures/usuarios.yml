@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Persona_id: 
+  Rol_id: 
+  Usuario: MyString
+  Password: MyString
+  Estado: 1
+
+two:
+  Persona_id: 
+  Rol_id: 
+  Usuario: MyString
+  Password: MyString
+  Estado: 1

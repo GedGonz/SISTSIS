@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Estudiante_id: 
+  Nombre_lugar: MyString
+  Cargo: MyString
+  Tiempo: MyString
+  Telefono: 1
+  Direccion: MyString
+
+two:
+  Estudiante_id: 
+  Nombre_lugar: MyString
+  Cargo: MyString
+  Tiempo: MyString
+  Telefono: 1
+  Direccion: MyString

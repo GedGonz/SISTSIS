@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Tasa: 9.99
+  Dia: 1
+  Mes: 1
+  Ano: 1
+
+two:
+  Tasa: 9.99
+  Dia: 1
+  Mes: 1
+  Ano: 1

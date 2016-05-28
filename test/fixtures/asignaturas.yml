@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Titulo: MyString
+  Descripcion: MyString
+  Tipo_asignatura: MyString
+  Credito: 1
+  Prerrequisito: 1
+  Prescedencia: 1
+
+two:
+  Titulo: MyString
+  Descripcion: MyString
+  Tipo_asignatura: MyString
+  Credito: 1
+  Prerrequisito: 1
+  Prescedencia: 1

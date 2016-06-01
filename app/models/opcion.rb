@@ -1,5 +1,5 @@
 class Opcion < ActiveRecord::Base
   belongs_to :Modulo
-  has_many :UsuarioOpcions
-  has_many :Usuario through: :UsuarioOpcions
+  has_many :UsuarioOpcion 
+  has_many :Usuario through: :UsuarioOpcion
 end

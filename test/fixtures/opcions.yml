@@ -1,12 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  Modulo_id: 
   Opcion: MyString
   Descripcion: MyString
   Id_Padre: 1
   Estado: 1
 
 two:
+  Modulo_id: 
   Opcion: MyString
   Descripcion: MyString
   Id_Padre: 1

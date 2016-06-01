@@ -3,7 +3,7 @@ class CreateAsignaturas < ActiveRecord::Migration
     create_table :asignaturas do |t|
       t.string :Titulo
       t.string :Descripcion
-      t.string :Tipo_asignatura
+      t.string :Tipoasignatura
       t.integer :Credito
       t.integer :Prerrequisito
       t.integer :Prescedencia

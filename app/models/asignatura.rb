@@ -1,4 +1,4 @@
 class Asignatura < ActiveRecord::Base
-	has_many :Regimens
-	has_many :Regimenasignaturas through: :Regimens
+	has_many :Regimenasignaturas
+	has_many :Regimes through: :Regimenasignaturas
 end

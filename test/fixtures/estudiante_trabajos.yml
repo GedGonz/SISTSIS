@@ -2,7 +2,7 @@
 
 one:
   Estudiante_id: 
-  Nombre_lugar: MyString
+  Nombrelugar: MyString
   Cargo: MyString
   Tiempo: MyString
   Telefono: 1
@@ -10,7 +10,7 @@ one:
 
 two:
   Estudiante_id: 
-  Nombre_lugar: MyString
+  Nombrelugar: MyString
   Cargo: MyString
   Tiempo: MyString
   Telefono: 1

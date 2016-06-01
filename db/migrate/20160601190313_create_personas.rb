@@ -1,16 +1,16 @@
 class CreatePersonas < ActiveRecord::Migration
   def change
     create_table :personas do |t|
-      t.string :Primer_nombre
-      t.string :Segundo_nombre
-      t.string :Primer_apellido
-      t.string :Segundo_apellido
+      t.string :Primernombre
+      t.string :Segundonombre
+      t.string :Primerapellido
+      t.string :Segundoapellido
       t.integer :Edad
-      t.string :Tipo_sanguineo
+      t.string :Tiposanguineo
       t.string :Foto
       t.string :Cedula
       t.string :Direccion
-      t.string :Estado_civil
+      t.string :Estadocivil
       t.integer :Celular
       t.integer :Telefono
       t.string :Genero

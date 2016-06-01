@@ -5,11 +5,11 @@ one:
   Estudio: MyString
   Ano: 1
   Presedencia: MyString
-  tipo: 1
+  Tipo: 1
 
 two:
   Estudiante_id: 
   Estudio: MyString
   Ano: 1
   Presedencia: MyString
-  tipo: 1
+  Tipo: 1

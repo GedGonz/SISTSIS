@@ -3,7 +3,7 @@
 one:
   Titulo: MyString
   Descripcion: MyString
-  Tipo_asignatura: MyString
+  Tipoasignatura: MyString
   Credito: 1
   Prerrequisito: 1
   Prescedencia: 1
@@ -11,7 +11,7 @@ one:
 two:
   Titulo: MyString
   Descripcion: MyString
-  Tipo_asignatura: MyString
+  Tipoasignatura: MyString
   Credito: 1
   Prerrequisito: 1
   Prescedencia: 1

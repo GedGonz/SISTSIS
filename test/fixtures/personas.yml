@@ -1,16 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  Primer_nombre: MyString
-  Segundo_nombre: MyString
-  Primer_apellido: MyString
-  Segundo_apellido: MyString
+  Primernombre: MyString
+  Segundonombre: MyString
+  Primerapellido: MyString
+  Segundoapellido: MyString
   Edad: 1
-  Tipo_sanguineo: MyString
+  Tiposanguineo: MyString
   Foto: MyString
   Cedula: MyString
   Direccion: MyString
-  Estado_civil: MyString
+  Estadocivil: MyString
   Celular: 1
   Telefono: 1
   Genero: MyString
@@ -18,16 +18,16 @@ one:
   Municipio_id: 
 
 two:
-  Primer_nombre: MyString
-  Segundo_nombre: MyString
-  Primer_apellido: MyString
-  Segundo_apellido: MyString
+  Primernombre: MyString
+  Segundonombre: MyString
+  Primerapellido: MyString
+  Segundoapellido: MyString
   Edad: 1
-  Tipo_sanguineo: MyString
+  Tiposanguineo: MyString
   Foto: MyString
   Cedula: MyString
   Direccion: MyString
-  Estado_civil: MyString
+  Estadocivil: MyString
   Celular: 1
   Telefono: 1
   Genero: MyString

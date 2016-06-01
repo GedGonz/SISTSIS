@@ -5,7 +5,7 @@ class CreateEstudianteEstudios < ActiveRecord::Migration
       t.string :Estudio
       t.integer :Ano
       t.string :Presedencia
-      t.integer :tipo
+      t.integer :Tipo
 
       t.timestamps null: false
     end

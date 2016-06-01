@@ -2,18 +2,18 @@
 
 one:
   Asignatura_id: 
-  Regimen_id: 
+  Regime_id: 
   Codigo: MyString
-  Hrsemana: 1
-  Hrtotales: 1
+  hrsemana: 1
+  hrtotales: 1
   Estado: 1
   Planestudio: MyString
 
 two:
   Asignatura_id: 
-  Regimen_id: 
+  Regime_id: 
   Codigo: MyString
-  Hrsemana: 1
-  Hrtotales: 1
+  hrsemana: 1
+  hrtotales: 1
   Estado: 1
   Planestudio: MyString

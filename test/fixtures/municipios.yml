@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  Departamento_id: 
   Municipio: MyString
   Descripcion: MyString
 
 two:
+  Departamento_id: 
   Municipio: MyString
   Descripcion: MyString

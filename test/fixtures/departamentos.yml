@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  Country_id: 
   Departamento: MyString
   Descripcion: MyString
-  Pais_id: 
 
 two:
+  Country_id: 
   Departamento: MyString
   Descripcion: MyString
-  Pais_id: 

@@ -1,46 +1,265 @@
 <div class="container">
 	<br>
 	<br>
-	<div class="row">
-		<div class="col-md-10">
+	<fieldset >
+	<legend>Datos Estudiante</legend>
+	
+		<div class="row">
+			<div class="col-md-10">
+			<br>
+			<br>
+				<div class="row">
+					<div class="col-md-4">
+					<label style=" width: 150px;">Nº Carnet:</label>
+					<input type="text" name="NumCarnet" class="form-control">
+					</div>
+					<div class="col-md-4">
+					<label style=" width: 150px;">Primer Nombre:</label>
+					<input type="text" name="Primernombre" class="form-control">
+					</div>
+					<div class="col-md-4">
+					<label style=" width: 150px;">Segundo Nombre:</label>
+					<input type="text" name="Segundornombre" class="form-control">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+					<label style=" width: 150px;">Primer Apellido:</label>
+					<input type="text" name="Primerapellido" class="form-control">
+					</div>
+					<div class="col-md-4">
+					<label style=" width: 150px;">Segundo Apellido:</label>
+					<input type="text" name="Segundoapellido" class="form-control">
+					</div>
+					<div class="col-md-4">
+					<label style=" width: 150px;">Edad:</label>
+					<input type="text" name="Edad" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<%= image_tag "adefault_user.png", :alt => "User",:class=>"PictureDefault", :title => "User"%>
+			</div>
+		</div>
+		<div class="row">
+			 <div class="col-md-12">
+			 <label style=" width: 150px;">Direccion:</label>
+			 <textarea type="text" name="Direccionestu" class="form-control"></textarea>
+			 </div>
+		</div>
+		<div class="row">
+			 <div class="col-md-3">
+				 <label style=" width: 150px;">Tipo Sanguineo:</label>
+				 <input type="text" name="tiposanguineo" class="form-control"></input>
+			 </div>
+			 <div class="col-md-3">
+				 <label style=" width: 150px;">Estado Civil:</label>
+				 <input type="text" name="Estadocivil" class="form-control"></input>
+			 </div>
+			 <div class="col-md-3">
+				 <label style=" width: 150px;">Celular:</label>
+				 <input type="text" name="Celular" class="form-control"></input>
+			 </div>
+			 <div class="col-md-3">
+				 <label style=" width: 150px;">Telefono:</label>
+				 <input type="text" name="Telefono" class="form-control"></input>
+			 </div>
+		</div>
+		<div class="row">
+			 <div class="col-md-3">
+				 <label style=" width: 150px;">Genero:</label>
+				 <input type="text" name="Genero" class="form-control"></input>
+			 </div>
+			 <div class="col-md-3">
+			  <label style=" width: 150px;">Municipio:</label>
+			  <select name="" id="" class="form-control">
+				  <option value="0">Seleccione</option>
+			  </select>
+			 </div>
+			 <div class="col-md-3">
+			 </div>
+			  <div class="col-md-3">
+			 </div>
+		</div>
+	</fieldset>
+	<br>
+	<fieldset >
+	<legend>Estudios</legend>
 		<div class="row">
 			<div class="col-md-3">
-			<label style=" width: 150px;">Primer Nombre:</label>
-			<input type="text" name="Primernombre" class="form-control">
+				<label style=" width: 150px;">Estudio:</label>
+				<input type="text" name="Estudio" class="form-control"></input>
 			</div>
 			<div class="col-md-3">
-			<label style=" width: 150px;">Segundo Nombre:</label>
-			<input type="text" name="Segundornombre" class="form-control">
+				<label style=" width: 150px;">Año:</label>
+				<input type="text" name="Ano" class="form-control"></input>
 			</div>
 			<div class="col-md-3">
-			<label style=" width: 150px;">Primer Apellido:</label>
-			<input type="text" name="Primerapellido" class="form-control">
+				<label style=" width: 150px;">Presedencia:</label>
+				<input type="text" name="Presedencia" class="form-control"></input>
 			</div>
 			<div class="col-md-3">
+				<label style=" width: 150px;">Tipo:</label>
+				<select name="" id="" class="form-control">
+					<option value="0">seleccione</option>
+				</select>
 			</div>
-	    </div>
 		</div>
-		<div class="col-md-2">
-			<img src="" alt="">
-		</div>
-	</div>
 
+	</fieldset>
+	<br>
+	<legend>Lugar de Trabajo</legend>
+		<div class="row">
+			<div class="col-md-3">
+				<label style=" width: 150px;">Centro de Trabajo:</label>
+				<input type="text" name="Lugartrabajo" class="form-control"></input>
+			</div>
+			<div class="col-md-3">
+				<label style=" width: 150px;">Cargo:</label>
+				<input type="text" name="Cargo" class="form-control"></input>
+			</div>
+			<div class="col-md-3">
+				<label style=" width: 150px;">Tiempo:</label>
+				<input type="text" name="Tiempo" class="form-control"></input>
+			</div>
+			<div class="col-md-3">
+				<label style=" width: 150px;">Telefono:</label>
+				<input type="text" name="Telefono" class="form-control"></input>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<label style=" width: 150px;">Direccion:</label>
+				<textarea type="text" name="Direcciontrabajo" class="form-control"></textarea>
+			</div>
+		</div>
+	</fieldset>
+	<br>
+	<fieldset >
+
+	<legend>Familiar</legend>
 	<div class="row">
 		<div class="col-md-3">
-		<label style=" width: 150px;">Edad:</label>
-		<input type="text" name="Edad" class="form-control">
-		</div>
-		<div class="col-md-3">
-		<label style=" width: 150px;">Tipo Sanguineo:</label>
-		<input type="text" name="Tiposanguineo" class="form-control">
-		</div>
-		<div class="col-md-3">
 		<label style=" width: 150px;">Cedula:</label>
-		<input type="text" name="Cedula"  class="form-control" maxlength="14">
+		<input type="text" class="form-control">
 		</div>
 		<div class="col-md-3">
-		<label style=" width: 150px;">Direccion:</label>
-		<input type="text" name="Direccion" class="form-control">
+		<label style=" width: 150px;">Nombre:</label>
+		<input type="text" name="NombrePadre1" class="form-control"></input>
+		</div>
+		<div class="col-md-3">
+		<label style=" width: 150px;">Apellido:</label>
+		<input type="text" name="ApellidoPadre1" class="form-control"></input>
+		</div>
+		<div class="col-md-3">
+		<br>
+		<span data-toggle="modal" data-target="#myModal"><%=icon('fa fa-plus')%></span>
 		</div>
 	</div>
+		
+
+		
+
+	</fieldset>
+
+
+		<!-- Button trigger modal -->
+	
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	      </div>
+	      <div class="modal-body">
+			<div class="row">
+				<div class="col-md-10">
+				<br>
+				<br>
+					<div class="row">
+						<div class="col-md-4">
+						<label style=" width: 150px;">Primer Nombre:</label>
+						<input type="text" name="Primernombre" class="form-control">
+						</div>
+						<div class="col-md-4">
+						<label style=" width: 150px;">Segundo Nombre:</label>
+						<input type="text" name="Segundornombre" class="form-control">
+						</div>
+						<div class="col-md-4">
+						<label style=" width: 150px;">Primer Apellido:</label>
+						<input type="text" name="Primerapellido" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						
+						<div class="col-md-4">
+						<label style=" width: 150px;">Segundo Apellido:</label>
+						<input type="text" name="Segundoapellido" class="form-control">
+						</div>
+						<div class="col-md-4">
+						<label style=" width: 150px;">Edad:</label>
+						<input type="text" name="Edad" class="form-control">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<%= image_tag "adefault_user.png", :alt => "User",:class=>"PictureDefault", :title => "User"%>
+				</div>
+			</div>
+			<div class="row">
+				 <div class="col-md-12">
+				 <label style=" width: 150px;">Direccion:</label>
+				 <textarea type="text" name="Direccionestu" class="form-control"></textarea>
+				 </div>
+			</div>
+			<div class="row">
+				 <div class="col-md-3">
+					 <label style=" width: 150px;">Tipo Sanguineo:</label>
+					 <input type="text" name="tiposanguineo" class="form-control"></input>
+				 </div>
+				 <div class="col-md-3">
+					 <label style=" width: 150px;">Estado Civil:</label>
+					 <input type="text" name="Estadocivil" class="form-control"></input>
+				 </div>
+				 <div class="col-md-3">
+					 <label style=" width: 150px;">Celular:</label>
+					 <input type="text" name="Celular" class="form-control"></input>
+				 </div>
+				 <div class="col-md-3">
+					 <label style=" width: 150px;">Telefono:</label>
+					 <input type="text" name="Telefono" class="form-control"></input>
+				 </div>
+			</div>
+			<div class="row">
+				 <div class="col-md-3">
+					 <label style=" width: 150px;">Genero:</label>
+					 <input type="text" name="Genero" class="form-control"></input>
+				 </div>
+				 <div class="col-md-3">
+				  <label style=" width: 150px;">Municipio:</label>
+				  <select name="" id="" class="form-control">
+					  <option value="0">Seleccione</option>
+				  </select>
+				 </div>
+				 <div class="col-md-3">
+				 </div>
+				  <div class="col-md-3">
+				 </div>
+			</div>
+
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 </div>
+

@@ -18,7 +18,7 @@
 
 //require rails-timeago
 //require rails-timeago-all
-
+//require jsBrowser
 //= require nprogress
 //= require nprogress-turbolinks
 //= require turbolinks

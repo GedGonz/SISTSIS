@@ -1,3 +1,4 @@
+
 <div class="container">
 	<br>
 	<br>
@@ -6,8 +7,8 @@
 	
 		<div class="row">
 			<div class="col-md-10">
-			<br>
-			<br>
+				<br>
+				<br>
 				<div class="row">
 					<div class="col-md-4">
 					<label style=" width: 150px;">Nº Carnet:</label>
@@ -37,10 +38,23 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="col-md-2">
 				<%= image_tag "adefault_user.png", :alt => "User",:class=>"PictureDefault", :title => "User"%>
+				<br>
+				<div class="fileupload fileupload-new" data-provides="fileupload">
+                         <span class="btn btn-default btn-group-justified btn-sm btn-file">
+                           <span class="fileupload-new"> Photo</span>
+                           <span class="fileupload-exists"> Change</span>
+                           <input id="PhotoUser" name="PhotoUser"  type="file">
+
+                           </span>
+                         <!--<span class="fileupload-preview margin-left"></span>
+                         <a id="FileNameSelect"  href="#" class="close fileupload-exists"  data-dismiss="fileupload" style="float: none"> x</a>-->
+                </div>
 			</div>
 		</div>
+
 		<div class="row">
 			 <div class="col-md-12">
 			 <label style=" width: 150px;">Direccion:</label>
@@ -107,63 +121,80 @@
 		</div>
 
 	</fieldset>
-	<br>
-	<legend>Lugar de Trabajo</legend>
-		<div class="row">
-			<div class="col-md-3">
-				<label style=" width: 150px;">Centro de Trabajo:</label>
-				<input type="text" name="Lugartrabajo" class="form-control"></input>
+		<br>
+		<legend>Lugar de Trabajo</legend>
+			<div class="row">
+				<div class="col-md-3">
+					<label style=" width: 150px;">Centro de Trabajo:</label>
+					<input type="text" name="Lugartrabajo" class="form-control"></input>
+				</div>
+				<div class="col-md-3">
+					<label style=" width: 150px;">Cargo:</label>
+					<input type="text" name="Cargo" class="form-control"></input>
+				</div>
+				<div class="col-md-3">
+					<label style=" width: 150px;">Tiempo:</label>
+					<input type="text" name="Tiempo" class="form-control"></input>
+				</div>
+				<div class="col-md-3">
+					<label style=" width: 150px;">Telefono:</label>
+					<input type="text" name="Telefono" class="form-control"></input>
+				</div>
 			</div>
-			<div class="col-md-3">
-				<label style=" width: 150px;">Cargo:</label>
-				<input type="text" name="Cargo" class="form-control"></input>
+			<div class="row">
+				<div class="col-md-12">
+					<label style=" width: 150px;">Direccion:</label>
+					<textarea type="text" name="Direcciontrabajo" class="form-control"></textarea>
+				</div>
 			</div>
-			<div class="col-md-3">
-				<label style=" width: 150px;">Tiempo:</label>
-				<input type="text" name="Tiempo" class="form-control"></input>
-			</div>
-			<div class="col-md-3">
-				<label style=" width: 150px;">Telefono:</label>
-				<input type="text" name="Telefono" class="form-control"></input>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<label style=" width: 150px;">Direccion:</label>
-				<textarea type="text" name="Direcciontrabajo" class="form-control"></textarea>
-			</div>
-		</div>
 	</fieldset>
 	<br>
 	<fieldset >
-
-	<legend>Familiar</legend>
-	<div class="row">
-		<div class="col-md-3">
-		<label style=" width: 150px;">Cedula:</label>
-		<input type="text" class="form-control">
-		</div>
-		<div class="col-md-3">
-		<label style=" width: 150px;">Nombre:</label>
-		<input type="text" name="NombrePadre1" class="form-control"></input>
-		</div>
-		<div class="col-md-3">
-		<label style=" width: 150px;">Apellido:</label>
-		<input type="text" name="ApellidoPadre1" class="form-control"></input>
-		</div>
-		<div class="col-md-3">
-		<br>
-		<span data-toggle="modal" data-target="#myModal"><%=icon('fa fa-plus')%></span>
-		</div>
-	</div>
-		
-
-		
-
+		<legend>Familiar</legend>
+			<div class="row">
+				<div class="col-md-3">
+				<label style=" width: 150px;">Cedula:</label>
+				<input type="text" name="cedulatutor1" class="form-control" placeholder="Digite la Cedula">
+				</div>
+				<div class="col-md-3">
+				<label style=" width: 150px;">Nombre:</label>
+				<input type="text" name="Nombretutor1" class="form-control"></input>
+				</div>
+				<div class="col-md-3">
+				<label style=" width: 150px;">Apellido:</label>
+				<input type="text" name="Apellidotutor1" class="form-control"></input>
+				</div>
+				<div class="col-md-3">
+				<br>
+				<br>
+				<span data-toggle="modal" data-target="#myModal"><%=icon('fa fa-pencil-square-o fa-lg')%></span>
+				<span data-toggle="modal" data-target="#myModal"><%=icon('fa fa-search fa-lg')%></span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+				<label style=" width: 150px;">Cedula:</label>
+				<input type="text" name="cedulatutor2" class="form-control" placeholder="Digite la Cedula">
+				</div>
+				<div class="col-md-3">
+				<label style=" width: 150px;">Nombre:</label>
+				<input type="text" name="Nombretutor2" class="form-control"></input>
+				</div>
+				<div class="col-md-3">
+				<label style=" width: 150px;">Apellido:</label>
+				<input type="text" name="Apellidotutor2" class="form-control"></input>
+				</div>
+				<div class="col-md-3">
+				<br>
+				<br>
+				<span data-toggle="modal" data-target="#myModal"><%=icon('fa fa-pencil-square-o fa-lg')%></span>
+				<span data-toggle="modal" data-target="#myModal"><%=icon('fa fa-search fa-lg')%></span>
+				</div>
+		    </div>
 	</fieldset>
+	<br>
+	<br>
 
-
-		<!-- Button trigger modal -->
 	
 
 	<!-- Modal -->
@@ -174,13 +205,11 @@
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
-	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	        <h4 class="modal-title" id="myModalLabel">Registro de Tutor</h4>
 	      </div>
 	      <div class="modal-body">
 			<div class="row">
 				<div class="col-md-10">
-				<br>
-				<br>
 					<div class="row">
 						<div class="col-md-4">
 						<label style=" width: 150px;">Primer Nombre:</label>

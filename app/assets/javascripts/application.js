@@ -13,9 +13,8 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-
+//= require bootstrap_sb_admin_base_v2
 //= require bootstrap-sprockets
-
 //require rails-timeago
 //require rails-timeago-all
 //require jsBrowser

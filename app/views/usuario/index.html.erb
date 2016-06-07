@@ -3,18 +3,21 @@
 	<div class="col-sm-4"></div>
 	<div class="col-sm-4">
 		<div class="panels">
-			<div class="titulologin text-center">
-			<h3 class="titlelogin">LOGIN-<span class="spaner">TSIS</span></h3>
-			 <%= image_tag "logoUni.png", :alt => "logoUni",:class=>"Log", :title => "logoUni"%>
-				
-				<div class="borde">
-				</div>
+			<div class="titulologin ">
+			 <!--<%= image_tag "tsis.png", :alt => "logoUni",:class=>"LogoUser", :title => "logoUni"%>
+				<i class="fa fa-user fa-5x color-blue" aria-hidden="true"></i>-->
+
 				<br>
 				<br>
 			</div>
-			<div class="form-group">
-			<input name="user" type="text" placeholder="Username" class="form-control">
-			<br>
+				
+			<div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><span class="fa fa-user fa-lg" aria-hidden="true"></span></span>
+                    <input name="user" type="text" placeholder="Username" class="form-control">
+             </div>
+
+			<div class="input-group">
+				<span class="input-group-addon pass" id="basic-addon1"><span class="fa fa-unlock-alt fa-lg" aria-hidden="true"></span></span>
 				<input name="pasword" type="password" placeholder="Password" class="form-control">
 			</div>
 			<br>

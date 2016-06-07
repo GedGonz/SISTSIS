@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 
-gem 'coffee-script-source', '1.8.0'
+gem 'coffee-script-source'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -24,6 +24,7 @@ gem 'nprogress-rails'
 
 # Gema para el frontend con bootstrap
 gem 'bootstrap-sass'
+
 gem 'bootstrap_sb_admin_base_v2'
 # Gema para el login en rails no se ha decidido si usarse
 #gem 'devise'

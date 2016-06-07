@@ -164,7 +164,7 @@ DEPENDENCIES
   bootstrap_sb_admin_base_v2
   byebug
   coffee-rails (~> 4.1.0)
-  coffee-script-source (= 1.8.0)
+  coffee-script-source
   font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails

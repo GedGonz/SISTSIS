@@ -10,20 +10,22 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap_sb_admin_base_v2
  *= require_tree .
  *= require_self
  */
-
+/*
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+*/
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
 /*CSS para el layout*/
 #Header
 {
-background: #003782;
+//background: #003782;
+background-image: url('/assets/fondo.gif');
 height: 9em;
 }
 #rowheader
@@ -33,13 +35,13 @@ height: 9em;
 }		
 .Titulo1
 {
-	font-family: Cambria,serif;
+	font-family: Helvetica,serif;
 	color: white;
 	font-size: 30px;
 }
 .Titulo2
 {
-	font-family: Cambria,serif;
+	font-family: Helvetica,serif;
 	color: white;
 	font-size: 23px;
 }
@@ -58,6 +60,19 @@ height: 9em;
 .PictureDefault
 {
 	max-width: 100%;
+}
+
+.form-control
+{
+	border-radius: 0px;
+}
+
+
+.panel-primary > .panel-heading {
+    color: #fff;
+	background-image: url('/assets/fondo.gif');
+	z-index: 20px;
+    border-color: #337ab7;
 }
 
 

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'usuario/index'
+
   get 'estudiante/new'
 
   get 'home/index'

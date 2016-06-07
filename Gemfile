@@ -24,7 +24,7 @@ gem 'nprogress-rails'
 
 # Gema para el frontend con bootstrap
 gem 'bootstrap-sass'
-
+gem 'bootstrap_sb_admin_base_v2'
 # Gema para el login en rails no se ha decidido si usarse
 #gem 'devise'
 

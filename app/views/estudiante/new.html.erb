@@ -1,12 +1,17 @@
-
-<div class="container">
-	<br>
-	<br>
-	<fieldset >
-	<legend>Datos Estudiante</legend>
-	
+<br>
+<br>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			Datos Estudiante
+		</div>
+		<div class="panel-body">
 		<div class="row">
-			<div class="col-md-10">
+
+			<div class="col-md-1">
+			</div>
+
+			<div class="col-md-8">
+
 				<br>
 				<br>
 				<div class="row">
@@ -38,7 +43,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="col-md-2">
 				<%= image_tag "adefault_user.png", :alt => "User",:class=>"PictureDefault", :title => "User"%>
 				<br>
@@ -53,36 +58,48 @@
                          <a id="FileNameSelect"  href="#" class="close fileupload-exists"  data-dismiss="fileupload" style="float: none"> x</a>-->
                 </div>
 			</div>
+			<div class="col-md-1">
+			</div>
 		</div>
 
 		<div class="row">
-			 <div class="col-md-12">
+			 <div class="col-md-1">
+			 </div>
+			 <div class="col-md-10">
 			 <label style=" width: 150px;">Direccion:</label>
 			 <textarea type="text" name="Direccionestu" class="form-control"></textarea>
 			 </div>
+			 <div class="col-md-1">
+			</div>
 		</div>
 		<div class="row">
-			 <div class="col-md-3">
+			 <div class="col-md-1">
+			 </div>
+			 <div class="col-md-2">
 				 <label style=" width: 150px;">Tipo Sanguineo:</label>
 				 <input type="text" name="tiposanguineo" class="form-control"></input>
 			 </div>
-			 <div class="col-md-3">
+			 <div class="col-md-2">
 				 <label style=" width: 150px;">Estado Civil:</label>
 				 <input type="text" name="Estadocivil" class="form-control"></input>
 			 </div>
-			 <div class="col-md-3">
+			 <div class="col-md-2">
 				 <label style=" width: 150px;">Celular:</label>
 				 <input type="text" name="Celular" class="form-control"></input>
 			 </div>
-			 <div class="col-md-3">
+			 <div class="col-md-2">
 				 <label style=" width: 150px;">Telefono:</label>
 				 <input type="text" name="Telefono" class="form-control"></input>
 			 </div>
-		</div>
-		<div class="row">
-			 <div class="col-md-3">
+			 <div class="col-md-2">
 				 <label style=" width: 150px;">Genero:</label>
 				 <input type="text" name="Genero" class="form-control"></input>
+			 </div>
+			  <div class="col-md-1">
+			 </div>
+		</div>
+		<div class="row">
+			 <div class="col-md-1">
 			 </div>
 			 <div class="col-md-3">
 			  <label style=" width: 150px;">Municipio:</label>
@@ -90,81 +107,109 @@
 				  <option value="0">Seleccione</option>
 			  </select>
 			 </div>
-			 <div class="col-md-3">
+			 
+			  <div class="col-md-3">
 			 </div>
 			  <div class="col-md-3">
 			 </div>
+			 <div class="col-md-2">
+			 </div>
 		</div>
-	</fieldset>
-	<br>
-	<fieldset >
-	<legend>Estudios</legend>
-		<div class="row">
-			<div class="col-md-3">
-				<label style=" width: 150px;">Estudio:</label>
-				<input type="text" name="Estudio" class="form-control"></input>
-			</div>
-			<div class="col-md-3">
-				<label style=" width: 150px;">Año:</label>
-				<input type="text" name="Ano" class="form-control"></input>
-			</div>
-			<div class="col-md-3">
-				<label style=" width: 150px;">Presedencia:</label>
-				<input type="text" name="Presedencia" class="form-control"></input>
-			</div>
-			<div class="col-md-3">
-				<label style=" width: 150px;">Tipo:</label>
-				<select name="" id="" class="form-control">
-					<option value="0">seleccione</option>
-				</select>
-			</div>
 		</div>
+	</div>
 
-	</fieldset>
-		<br>
-		<legend>Lugar de Trabajo</legend>
+
+	<br>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+		Estudios
+		</div>
+		<div class="panel-body">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-2">
+					<label style=" width: 150px;">Estudio:</label>
+					<input type="text" name="Estudio" class="form-control"></input>
+				</div>
+				<div class="col-md-2">
+					<label style=" width: 150px;">Año:</label>
+					<input type="text" name="Ano" class="form-control"></input>
+				</div>
+				<div class="col-md-2">
+					<label style=" width: 150px;">Presedencia:</label>
+					<input type="text" name="Presedencia" class="form-control"></input>
+				</div>
+				<div class="col-md-2">
+					<label style=" width: 150px;">Tipo:</label>
+					<select name="" id="" class="form-control">
+						<option value="0">seleccione</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+		<br>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			Lugar de Trabajo
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-2">
 					<label style=" width: 150px;">Centro de Trabajo:</label>
 					<input type="text" name="Lugartrabajo" class="form-control"></input>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<label style=" width: 150px;">Cargo:</label>
 					<input type="text" name="Cargo" class="form-control"></input>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<label style=" width: 150px;">Tiempo:</label>
 					<input type="text" name="Tiempo" class="form-control"></input>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<label style=" width: 150px;">Telefono:</label>
 					<input type="text" name="Telefono" class="form-control"></input>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-10">
 					<label style=" width: 150px;">Direccion:</label>
 					<textarea type="text" name="Direcciontrabajo" class="form-control"></textarea>
 				</div>
 			</div>
-	</fieldset>
+		</div>
+	</div>	
+
+
 	<br>
-	<fieldset >
-		<legend>Familiar</legend>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+		Familiar
+		</div>
+		<div class="panel-body">
+			
 			<div class="row">
-				<div class="col-md-3">
+			    <div class="col-md-1">
+				</div>
+				<div class="col-md-2">
 				<label style=" width: 150px;">Cedula:</label>
 				<input type="text" name="cedulatutor1" class="form-control" placeholder="Digite la Cedula">
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 				<label style=" width: 150px;">Nombre:</label>
 				<input type="text" name="Nombretutor1" class="form-control"></input>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 				<label style=" width: 150px;">Apellido:</label>
 				<input type="text" name="Apellidotutor1" class="form-control"></input>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 				<br>
 				<br>
 				<span data-toggle="modal" data-target="#myModal"><%=icon('fa fa-pencil-square-o fa-lg')%></span>
@@ -172,26 +217,29 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-2">
 				<label style=" width: 150px;">Cedula:</label>
 				<input type="text" name="cedulatutor2" class="form-control" placeholder="Digite la Cedula">
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 				<label style=" width: 150px;">Nombre:</label>
 				<input type="text" name="Nombretutor2" class="form-control"></input>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 				<label style=" width: 150px;">Apellido:</label>
 				<input type="text" name="Apellidotutor2" class="form-control"></input>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 				<br>
 				<br>
 				<span data-toggle="modal" data-target="#myModal"><%=icon('fa fa-pencil-square-o fa-lg')%></span>
 				<span data-toggle="modal" data-target="#myModal"><%=icon('fa fa-search fa-lg')%></span>
 				</div>
 		    </div>
-	</fieldset>
+		</div>
+	</div>
 	<br>
 	<br>
 
@@ -290,5 +338,4 @@
 	  </div>
 	</div>
 
-</div>
 

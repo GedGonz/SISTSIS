@@ -2,8 +2,13 @@ Rails.application.routes.draw do
 
   get 'usuario/index'
 
+  # rutas Estudante
+  # --------------------------------------------------------------------------------
   get 'estudiante/new'
 
+  post 'estudiante/create' =>'estudiante#create'
+
+  #---------------------------------------------------------------------------------
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

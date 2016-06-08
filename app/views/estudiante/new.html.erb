@@ -1,5 +1,6 @@
 <br>
 <br>
+<%=form_for(:estudiante,remote: true,:url=>{:action=>:create}) do |f|%>
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			Datos Estudiante
@@ -17,29 +18,35 @@
 				<div class="row">
 					<div class="col-md-4">
 					<label style=" width: 150px;">Nº Carnet:</label>
-					<input type="text" name="NumCarnet" class="form-control">
+					<%=f.text_field(:NumCarnet,id:"NumCarnet",class:"form-control")%>
+					<!--<input type="text" name="NumCarnet" class="form-control">-->
 					</div>
 					<div class="col-md-4">
 					<label style=" width: 150px;">Primer Nombre:</label>
-					<input type="text" name="Primernombre" class="form-control">
+					<%=f.text_field(:Primernombre,id:"Primernombre",class:"form-control")%>
+					<!--<input type="text" name="Primernombre" class="form-control">-->
 					</div>
 					<div class="col-md-4">
 					<label style=" width: 150px;">Segundo Nombre:</label>
-					<input type="text" name="Segundornombre" class="form-control">
+					<%=f.text_field(:Segundornombre,id:"Segundornombre",class:"form-control")%>
+					<!--<input type="text" name="Segundornombre" class="form-control">-->
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4">
 					<label style=" width: 150px;">Primer Apellido:</label>
-					<input type="text" name="Primerapellido" class="form-control">
+					<%=f.text_field(:Primerapellido,id:"Primerapellido",class:"form-control")%>
+					<!--<input type="text" name="Primerapellido" class="form-control">-->
 					</div>
 					<div class="col-md-4">
 					<label style=" width: 150px;">Segundo Apellido:</label>
-					<input type="text" name="Segundoapellido" class="form-control">
+					<%=f.text_field(:Segundoapellido,id:"Segundoapellido",class:"form-control")%>
+					<!--<input type="text" name="Segundoapellido" class="form-control">-->
 					</div>
 					<div class="col-md-4">
 					<label style=" width: 150px;">Edad:</label>
-					<input type="text" name="Edad" class="form-control">
+					<%=f.text_field(:Edad,id:"Edad",class:"form-control")%>
+					<!--<input type="text" name="Edad" class="form-control">-->
 					</div>
 				</div>
 			</div>
@@ -67,7 +74,8 @@
 			 </div>
 			 <div class="col-md-10">
 			 <label style=" width: 150px;">Direccion:</label>
-			 <textarea type="text" name="Direccionestu" class="form-control"></textarea>
+			 <%=f.text_area(:Direccionestu,class:"form-control")%>
+			 <!--<textarea type="text" name="Direccionestu" class="form-control"></textarea>-->
 			 </div>
 			 <div class="col-md-1">
 			</div>
@@ -77,23 +85,31 @@
 			 </div>
 			 <div class="col-md-2">
 				 <label style=" width: 150px;">Tipo Sanguineo:</label>
-				 <input type="text" name="tiposanguineo" class="form-control"></input>
+				<%=f.select(:tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+				 <!--<input type="text" name="tiposanguineo" class="form-control"></input>-->
 			 </div>
 			 <div class="col-md-2">
 				 <label style=" width: 150px;">Estado Civil:</label>
-				 <input type="text" name="Estadocivil" class="form-control"></input>
+				 <%=f.select(:Estadocivil,['Solter@', 'Casad@', 'Divorciad@', 'Viud@', 'Union de hechos'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+				 <!--<input type="text" name="Estadocivil" class="form-control"></input>-->
 			 </div>
 			 <div class="col-md-2">
 				 <label style=" width: 150px;">Celular:</label>
-				 <input type="text" name="Celular" class="form-control"></input>
+				 <%=f.text_field(:Celular,id:"Celular",class:"form-control")%>
+				 <!--<input type="text" name="Celular" class="form-control"></input>-->
 			 </div>
 			 <div class="col-md-2">
 				 <label style=" width: 150px;">Telefono:</label>
-				 <input type="text" name="Telefono" class="form-control"></input>
+				 <%=f.text_field(:Telefono,id:"Telefono",class:"form-control")%>
+				 <!--<input type="text" name="Telefono" class="form-control"></input>-->
 			 </div>
 			 <div class="col-md-2">
 				 <label style=" width: 150px;">Genero:</label>
-				 <input type="text" name="Genero" class="form-control"></input>
+				 <%=radio_button_tag(:Genero, "Masculino") %> Masculino
+				 <br>
+				 <%=radio_button_tag(:Genero, "Femenino") %> Femenino
+				 <!--<%=f.text_field(:Genero,id:"Genero",class:"form-control")%>-->
+				 <!--<input type="text" name="Genero" class="form-control"></input>-->
 			 </div>
 			  <div class="col-md-1">
 			 </div>
@@ -103,9 +119,11 @@
 			 </div>
 			 <div class="col-md-3">
 			  <label style=" width: 150px;">Municipio:</label>
-			  <select name="" id="" class="form-control">
+			  <%=collection_select(:Municipio, :id, Municipio.all,:id, :Municipio,{},{:class=>"form-control"})%>
+
+			  <!--<select name="" id="" class="form-control">
 				  <option value="0">Seleccione</option>
-			  </select>
+			  </select>-->
 			 </div>
 			 
 			  <div class="col-md-3">
@@ -122,31 +140,37 @@
 	<br>
 	<div class="panel panel-default">
 		<div class="panel-heading">
-		Estudios
+		Procedencia
 		</div>
 		<div class="panel-body">
+		<%= f.fields_for :estudio do |e| %>
 			<div class="row">
 				<div class="col-md-1">
 				</div>
 				<div class="col-md-2">
 					<label style=" width: 150px;">Estudio:</label>
-					<input type="text" name="Estudio" class="form-control"></input>
+					<%=e.text_field(:Estudio,id:"Estudio",class:"form-control")%>
+					<!--<input type="text" name="Estudio" class="form-control"></input>-->
 				</div>
 				<div class="col-md-2">
 					<label style=" width: 150px;">Año:</label>
-					<input type="text" name="Ano" class="form-control"></input>
+					<%=e.text_field(:Anno,id:"Anno",class:"form-control")%>
+					<!--<input type="text" name="Ano" class="form-control"></input>-->
 				</div>
 				<div class="col-md-2">
 					<label style=" width: 150px;">Presedencia:</label>
-					<input type="text" name="Presedencia" class="form-control"></input>
+					<%=e.text_field(:Presedencia,id:"Presedencia",class:"form-control")%>
+					<!--<input type="text" name="Presedencia" class="form-control"></input>-->
 				</div>
 				<div class="col-md-2">
 					<label style=" width: 150px;">Tipo:</label>
-					<select name="" id="" class="form-control">
+					<%=e.select(:tipoestudio,['Publico', 'Privado'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+					<!--<select name="" id="" class="form-control">
 						<option value="0">seleccione</option>
-					</select>
+					</select>-->
 				</div>
 			</div>
+		<%end%>
 		</div>
 	</div>
 		<br>
@@ -155,24 +179,29 @@
 			Lugar de Trabajo
 		</div>
 		<div class="panel-body">
+		<%= f.fields_for :trabajo do |t| %>
 			<div class="row">
 				<div class="col-md-1">
 				</div>
 				<div class="col-md-2">
 					<label style=" width: 150px;">Centro de Trabajo:</label>
-					<input type="text" name="Lugartrabajo" class="form-control"></input>
+					<%=t.text_field(:Lugartrabajo,id:"Lugartrabajo",class:"form-control")%>
+					<!--<input type="text" name="Lugartrabajo" class="form-control"></input>-->
 				</div>
 				<div class="col-md-2">
 					<label style=" width: 150px;">Cargo:</label>
-					<input type="text" name="Cargo" class="form-control"></input>
+					<%=t.text_field(:Cargo,id:"Cargo",class:"form-control")%>
+					<!--<input type="text" name="Cargo" class="form-control"></input>-->
 				</div>
 				<div class="col-md-2">
 					<label style=" width: 150px;">Tiempo:</label>
-					<input type="text" name="Tiempo" class="form-control"></input>
+					<%=t.text_field(:Tiempo,id:"Tiempo",class:"form-control")%>
+					<!--<input type="text" name="Tiempo" class="form-control"></input>-->
 				</div>
 				<div class="col-md-2">
 					<label style=" width: 150px;">Telefono:</label>
-					<input type="text" name="Telefono" class="form-control"></input>
+					<%=t.text_field(:Telefono,id:"Telefono",class:"form-control")%>
+					<!--<input type="text" name="Telefono" class="form-control"></input>-->
 				</div>
 			</div>
 			<div class="row">
@@ -180,9 +209,11 @@
 				</div>
 				<div class="col-md-10">
 					<label style=" width: 150px;">Direccion:</label>
-					<textarea type="text" name="Direcciontrabajo" class="form-control"></textarea>
+					<%=t.text_area(:Direcciontrabajo,class:"form-control")%>
+					<!--<textarea type="text" name="Direcciontrabajo" class="form-control"></textarea>-->
 				</div>
 			</div>
+		<%end%>
 		</div>
 	</div>	
 
@@ -199,21 +230,24 @@
 				</div>
 				<div class="col-md-2">
 				<label style=" width: 150px;">Cedula:</label>
-				<input type="text" name="cedulatutor1" class="form-control" placeholder="Digite la Cedula">
+				<%=f.text_field(:cedulatutor1,id:"cedulatutor1",class:"form-control")%>
+				<!--<input type="text" name="cedulatutor1" class="form-control" placeholder="Digite la Cedula">-->
 				</div>
 				<div class="col-md-2">
 				<label style=" width: 150px;">Nombre:</label>
-				<input type="text" name="Nombretutor1" class="form-control"></input>
+				<%=f.text_field(:Nombretutor1,id:"Nombretutor1",class:"form-control")%>
+				<!--<input type="text" name="Nombretutor1" class="form-control"></input>-->
 				</div>
 				<div class="col-md-2">
 				<label style=" width: 150px;">Apellido:</label>
-				<input type="text" name="Apellidotutor1" class="form-control"></input>
+				<%=f.text_field(:Apellidotutor1,id:"Apellidotutor1",class:"form-control")%>
+				<!--<input type="text" name="Apellidotutor1" class="form-control"></input>-->
 				</div>
 				<div class="col-md-2">
 				<br>
 				<br>
-				<span data-toggle="modal" data-target="#myModal"><%=icon('fa fa-pencil-square-o fa-lg')%></span>
-				<span data-toggle="modal" data-target="#myModal"><%=icon('fa fa-search fa-lg')%></span>
+				<span data-toggle="modal" data-target="#MFamiliar"><%=icon('fa fa-pencil-square-o fa-lg')%></span>
+				<span data-toggle="modal" data-target="#MBusqueda"><%=icon('fa fa-search fa-lg')%></span>
 				</div>
 			</div>
 			<div class="row">
@@ -221,32 +255,36 @@
 				</div>
 				<div class="col-md-2">
 				<label style=" width: 150px;">Cedula:</label>
-				<input type="text" name="cedulatutor2" class="form-control" placeholder="Digite la Cedula">
+				<%=f.text_field(:cedulatutor2,id:"cedulatutor2",class:"form-control")%>
+				<!--<input type="text" name="cedulatutor2" class="form-control" placeholder="Digite la Cedula">-->
 				</div>
 				<div class="col-md-2">
 				<label style=" width: 150px;">Nombre:</label>
-				<input type="text" name="Nombretutor2" class="form-control"></input>
+				<%=f.text_field(:Nombretutor2,id:"Nombretutor2",class:"form-control")%>
+				<!--<input type="text" name="Nombretutor2" class="form-control"></input>-->
 				</div>
 				<div class="col-md-2">
 				<label style=" width: 150px;">Apellido:</label>
-				<input type="text" name="Apellidotutor2" class="form-control"></input>
+				<%=f.text_field(:Apellidotutor2,id:"Apellidotutor2",class:"form-control")%>
+				<!--<input type="text" name="Apellidotutor2" class="form-control"></input>-->
 				</div>
 				<div class="col-md-2">
 				<br>
 				<br>
-				<span data-toggle="modal" data-target="#myModal"><%=icon('fa fa-pencil-square-o fa-lg')%></span>
-				<span data-toggle="modal" data-target="#myModal"><%=icon('fa fa-search fa-lg')%></span>
+				<span data-toggle="modal" data-target="#MFamiliar"><%=icon('fa fa-pencil-square-o fa-lg')%></span>
+				<span data-toggle="modal" data-target="#MBusqueda"><%=icon('fa fa-search fa-lg')%></span>
 				</div>
 		    </div>
 		</div>
 	</div>
+<%end%>
 	<br>
 	<br>
 
 	
 
-	<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<!-- Modal Formulario-->
+	<div class="modal fade" id="MFamiliar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
@@ -256,31 +294,37 @@
 	        <h4 class="modal-title" id="myModalLabel">Registro de Tutor</h4>
 	      </div>
 	      <div class="modal-body">
+	      <%=form_for(:estudiante,remote: true,:url=>{:action=>:create}) do |f|%>
 			<div class="row">
 				<div class="col-md-10">
 					<div class="row">
 						<div class="col-md-4">
 						<label style=" width: 150px;">Primer Nombre:</label>
-						<input type="text" name="Primernombre" class="form-control">
+						<%=f.text_field(:Primernombre,id:"Primernombre",class:"form-control")%>
+						<!--<input type="text" name="Primernombre" class="form-control">-->
 						</div>
 						<div class="col-md-4">
 						<label style=" width: 150px;">Segundo Nombre:</label>
-						<input type="text" name="Segundornombre" class="form-control">
+						<%=f.text_field(:Segundornombre,id:"Segundornombre",class:"form-control")%>
+						<!--<input type="text" name="Segundornombre" class="form-control">-->
 						</div>
 						<div class="col-md-4">
 						<label style=" width: 150px;">Primer Apellido:</label>
-						<input type="text" name="Primerapellido" class="form-control">
+						<%=f.text_field(:Primerapellido,id:"Primerapellido",class:"form-control")%>
+						<!--<input type="text" name="Primerapellido" class="form-control">-->
 						</div>
 					</div>
 					<div class="row">
 						
 						<div class="col-md-4">
 						<label style=" width: 150px;">Segundo Apellido:</label>
-						<input type="text" name="Segundoapellido" class="form-control">
+						<%=f.text_field(:Segundoapellido,id:"Segundoapellido",class:"form-control")%>
+						<!--<input type="text" name="Segundoapellido" class="form-control">-->
 						</div>
 						<div class="col-md-4">
 						<label style=" width: 150px;">Edad:</label>
-						<input type="text" name="Edad" class="form-control">
+						<%=f.text_field(:Edad,id:"Edad",class:"form-control")%>
+						<!--<input type="text" name="Edad" class="form-control">-->
 						</div>
 					</div>
 				</div>
@@ -291,44 +335,52 @@
 			<div class="row">
 				 <div class="col-md-12">
 				 <label style=" width: 150px;">Direccion:</label>
-				 <textarea type="text" name="Direccionestu" class="form-control"></textarea>
+				 <%=f.text_area(:Direccionestu,class:"form-control")%>
+				 <!--<textarea type="text" name="Direccionestu" class="form-control"></textarea>-->
 				 </div>
 			</div>
 			<div class="row">
 				 <div class="col-md-3">
 					 <label style=" width: 150px;">Tipo Sanguineo:</label>
-					 <input type="text" name="tiposanguineo" class="form-control"></input>
+					 <%=f.select(:tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+					 <!--<input type="text" name="tiposanguineo" class="form-control"></input>-->
 				 </div>
 				 <div class="col-md-3">
 					 <label style=" width: 150px;">Estado Civil:</label>
-					 <input type="text" name="Estadocivil" class="form-control"></input>
+					 <%=f.select(:Estadocivil,['Solter@', 'Casad@', 'Divorciad@', 'Viud@', 'Union de hechos'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+					 <!--<input type="text" name="Estadocivil" class="form-control"></input>-->
 				 </div>
 				 <div class="col-md-3">
 					 <label style=" width: 150px;">Celular:</label>
-					 <input type="text" name="Celular" class="form-control"></input>
+					 <%=f.text_field(:Celular,id:"Celular",class:"form-control")%>
+					 <!--<input type="text" name="Celular" class="form-control"></input>-->
 				 </div>
 				 <div class="col-md-3">
 					 <label style=" width: 150px;">Telefono:</label>
-					 <input type="text" name="Telefono" class="form-control"></input>
+					 <%=f.text_field(:Telefono,id:"Telefono",class:"form-control")%>
+					 <!--<input type="text" name="Telefono" class="form-control"></input>-->
 				 </div>
 			</div>
 			<div class="row">
 				 <div class="col-md-3">
 					 <label style=" width: 150px;">Genero:</label>
-					 <input type="text" name="Genero" class="form-control"></input>
+					  <%=radio_button_tag(:Genero, "Masculino") %> Masculino <br>
+				 	  <%=radio_button_tag(:Genero, "Femenino") %> Femenino
+					 <!--<input type="text" name="Genero" class="form-control"></input>-->
 				 </div>
 				 <div class="col-md-3">
 				  <label style=" width: 150px;">Municipio:</label>
-				  <select name="" id="" class="form-control">
+				  <!--<select name="" id="" class="form-control">
 					  <option value="0">Seleccione</option>
-				  </select>
+				  </select>-->
+				 <%=collection_select(:Municipio, :id, Municipio.all,:id, :Municipio,{},{:class=>"form-control"})%>
 				 </div>
 				 <div class="col-md-3">
 				 </div>
 				  <div class="col-md-3">
 				 </div>
 			</div>
-
+		  <%end%>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -338,4 +390,53 @@
 	  </div>
 	</div>
 
+	<!-- Modal Table -->
+	<div class="modal fade" id="MBusqueda" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	        <h4 class="modal-title" id="myModalLabel">Buscar Familiar</h4>
+	      </div>
+	      <div class="modal-body">
+			<div class="">
+				<table>
+					<thead>
+						<tr>
+							<th>Codigo</th>
+							<th>Parentesco</th>
+							<th>Nombre</th>
+							<th>Apellido</th>
+							<th>Cedula</th>
+							<th>Edad</th>
+							<th>Celular</th>
+							<th>Direccion</th>
+							<th>Municipio</th>
+						</tr>
+					</thead>
+					<tbody>
+					<%@Persona.each do |p|%>
+						<tr>
+							<td><%=p.id%></td>
+							<td><%=p.Parentesco%></td>
+							<td><%=p.Primernombre%></td>
+							<td><%=p.Primerapellido%></td>
+							<td><%=p.Cedula%></td>
+							<td><%=p.Edad%></td>
+							<td><%=p.Celular%></td>
+							<td><%=p.Direccion%></td>
+							<td><%=p.Municipio%></td>
+						</tr>
+					<%end%>
+					</tbody>
+				</table>
+			</div>
+	      </div>
+	      <div class="modal-footer">
+	      </div>
+	    </div>
+	  </div>
+	</div>
 

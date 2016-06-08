@@ -1,9 +1,11 @@
 class EstudianteController < ApplicationController
   
   def index
+
   end
 
   def new
+    @Persona=Persona.all;
   end
 
   def create

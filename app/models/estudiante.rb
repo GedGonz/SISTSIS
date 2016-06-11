@@ -4,4 +4,5 @@ class Estudiante < ActiveRecord::Base
   has_many :EstudianteEstudios
   has_many :EstudianteTrabajos
   has_one :Matricula
+  accepts_nested_attributes_for :EstudianteEstudio
 end

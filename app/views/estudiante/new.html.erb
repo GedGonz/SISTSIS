@@ -1,50 +1,50 @@
 <br>
 <br>
-<%=form_for(:estudiante,remote: true,:url=>{:action=>:create}) do |f|%>
+<%=form_for(:persona,:url=>{:action=>:create}) do |f|%>
 	<div class="panel panel-default">
-		<div class="panel-heading">
+		<div class="panel-heading paneltitle">
 			Datos Estudiante
 		</div>
 		<div class="panel-body">
 		<div class="row">
 
-			<div class="col-md-1">
-			</div>
-
-			<div class="col-md-8">
+			<div class="col-md-10">
 
 				<br>
 				<br>
 				<div class="row">
+					
+						<div class="col-md-4">
+						<p style=" width: 150px;" class="stylep">Nº Carnet:</p>
+
+						<%=f.text_field(:NumCarnet,id:"NumCarnet",class:"form-control")%>
+						<!--<input type="text" name="NumCarnet" class="form-control">-->
+						</div>
+
 					<div class="col-md-4">
-					<label style=" width: 150px;">Nº Carnet:</label>
-					<%=f.text_field(:NumCarnet,id:"NumCarnet",class:"form-control")%>
-					<!--<input type="text" name="NumCarnet" class="form-control">-->
-					</div>
-					<div class="col-md-4">
-					<label style=" width: 150px;">Primer Nombre:</label>
+					<p  class="stylep">Primer Nombre:</p>
 					<%=f.text_field(:Primernombre,id:"Primernombre",class:"form-control")%>
 					<!--<input type="text" name="Primernombre" class="form-control">-->
 					</div>
 					<div class="col-md-4">
-					<label style=" width: 150px;">Segundo Nombre:</label>
+					<p  class="stylep">Segundo Nombre:</p>
 					<%=f.text_field(:Segundornombre,id:"Segundornombre",class:"form-control")%>
 					<!--<input type="text" name="Segundornombre" class="form-control">-->
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-					<label style=" width: 150px;">Primer Apellido:</label>
+					<p  class="stylep">Primer Apellido:</p>
 					<%=f.text_field(:Primerapellido,id:"Primerapellido",class:"form-control")%>
 					<!--<input type="text" name="Primerapellido" class="form-control">-->
 					</div>
 					<div class="col-md-4">
-					<label style=" width: 150px;">Segundo Apellido:</label>
+					<p  class="stylep">Segundo Apellido:</p>
 					<%=f.text_field(:Segundoapellido,id:"Segundoapellido",class:"form-control")%>
 					<!--<input type="text" name="Segundoapellido" class="form-control">-->
 					</div>
 					<div class="col-md-4">
-					<label style=" width: 150px;">Edad:</label>
+					<p  class="stylep">Edad:</p>
 					<%=f.text_field(:Edad,id:"Edad",class:"form-control")%>
 					<!--<input type="text" name="Edad" class="form-control">-->
 					</div>
@@ -54,84 +54,102 @@
 			<div class="col-md-2">
 				<%= image_tag "adefault_user.png", :alt => "User",:class=>"PictureDefault", :title => "User"%>
 				<br>
+				
+
 				<div class="fileupload fileupload-new" data-provides="fileupload">
                          <span class="btn btn-default btn-group-justified btn-sm btn-file">
                            <span class="fileupload-new"> Photo</span>
                            <span class="fileupload-exists"> Change</span>
-                           <input id="PhotoUser" name="PhotoUser"  type="file">
+                           <%=f.file_field(:Imag,:id=>"uploadBtn") %>
+                           <!--<input id="PhotoUser" name="PhotoUser"  type="file">-->
 
                            </span>
                          <!--<span class="fileupload-preview margin-left"></span>
                          <a id="FileNameSelect"  href="#" class="close fileupload-exists"  data-dismiss="fileupload" style="float: none"> x</a>-->
                 </div>
 			</div>
-			<div class="col-md-1">
-			</div>
+
 		</div>
 
 		<div class="row">
-			 <div class="col-md-1">
-			 </div>
+
 			 <div class="col-md-10">
-			 <label style=" width: 150px;">Direccion:</label>
+			 <p s class="stylep">Direccion:</p>
 			 <%=f.text_area(:Direccionestu,class:"form-control")%>
 			 <!--<textarea type="text" name="Direccionestu" class="form-control"></textarea>-->
 			 </div>
-			 <div class="col-md-1">
-			</div>
-		</div>
-		<div class="row">
-			 <div class="col-md-1">
-			 </div>
+
 			 <div class="col-md-2">
-				 <label style=" width: 150px;">Tipo Sanguineo:</label>
-				<%=f.select(:tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
-				 <!--<input type="text" name="tiposanguineo" class="form-control"></input>-->
-			 </div>
-			 <div class="col-md-2">
-				 <label style=" width: 150px;">Estado Civil:</label>
-				 <%=f.select(:Estadocivil,['Solter@', 'Casad@', 'Divorciad@', 'Viud@', 'Union de hechos'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
-				 <!--<input type="text" name="Estadocivil" class="form-control"></input>-->
-			 </div>
-			 <div class="col-md-2">
-				 <label style=" width: 150px;">Celular:</label>
-				 <%=f.text_field(:Celular,id:"Celular",class:"form-control")%>
-				 <!--<input type="text" name="Celular" class="form-control"></input>-->
-			 </div>
-			 <div class="col-md-2">
-				 <label style=" width: 150px;">Telefono:</label>
-				 <%=f.text_field(:Telefono,id:"Telefono",class:"form-control")%>
-				 <!--<input type="text" name="Telefono" class="form-control"></input>-->
-			 </div>
-			 <div class="col-md-2">
-				 <label style=" width: 150px;">Genero:</label>
+			 <br>
+				 <p class="stylep">Genero:</p>
 				 <%=radio_button_tag(:Genero, "Masculino") %> Masculino
 				 <br>
 				 <%=radio_button_tag(:Genero, "Femenino") %> Femenino
 				 <!--<%=f.text_field(:Genero,id:"Genero",class:"form-control")%>-->
 				 <!--<input type="text" name="Genero" class="form-control"></input>-->
 			 </div>
-			  <div class="col-md-1">
-			 </div>
+
 		</div>
 		<div class="row">
-			 <div class="col-md-1">
+			 <div class="col-md-3">
+				 <p  class="stylep">Cedula:</p>
+				 <%=f.text_field(:Cedula,id:"Cedula",class:"form-control")%>
+				 <!--<input type="text" name="Celular" class="form-control"></input>-->
 			 </div>
 			 <div class="col-md-3">
-			  <label style=" width: 150px;">Municipio:</label>
+				 <p class="stylep">Celular:</p>
+				 <%=f.text_field(:Celular,id:"Celular",class:"form-control")%>
+				 <!--<input type="text" name="Celular" class="form-control"></input>-->
+			 </div>
+			 <div class="col-md-3">
+				 <p class="stylep">Telefono:</p>
+				 <%=f.telephone_field(:Telefono,id:"Telefono",class:"form-control")%>
+				 <!--<input type="text" name="Telefono" class="form-control"></input>-->
+			 </div>
+			 <div class="col-md-3">
+				 <p class="stylep">Tipo Sanguineo:</p>
+				<%=f.select(:tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+				 <!--<input type="text" name="tiposanguineo" class="form-control"></input>-->
+			 </div>
+			
+			 
+
+
+		</div>
+		<div class="row">
+
+			 <div class="col-md-3">
+				 <p class="stylep">Estado Civil:</p>
+				 <%=f.select(:Estadocivil,['Solter@', 'Casad@', 'Divorciad@', 'Viud@', 'Union de hechos'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+				 <!--<input type="text" name="Estadocivil" class="form-control"></input>-->
+			 </div>
+			 <div class="col-md-3">
+			  <p class="stylep">Pais:</p>
+			  <%=collection_select(:Pais, :id, Country.all,:id, :Pais,{},{:class=>"form-control"})%>
+
+			  <!--<select name="" id="" class="form-control">
+				  <option value="0">Seleccione</option>
+			  </select>-->
+			 </div>
+			 <div class="col-md-3">
+			  <p class="stylep">Departamento:</p>
+			  <%=collection_select(:Departamento, :id, Departamento.all,:id, :Departamento,{},{:class=>"form-control"})%>
+
+			  <!--<select name="" id="" class="form-control">
+				  <option value="0">Seleccione</option>
+			  </select>-->
+			 </div>
+			 <div class="col-md-3">
+			  <p class="stylep">Municipio:</p>
 			  <%=collection_select(:Municipio, :id, Municipio.all,:id, :Municipio,{},{:class=>"form-control"})%>
 
 			  <!--<select name="" id="" class="form-control">
 				  <option value="0">Seleccione</option>
 			  </select>-->
 			 </div>
-			 
 			  <div class="col-md-3">
 			 </div>
-			  <div class="col-md-3">
-			 </div>
-			 <div class="col-md-2">
-			 </div>
+
 		</div>
 		</div>
 	</div>
@@ -143,33 +161,34 @@
 		Procedencia
 		</div>
 		<div class="panel-body">
-		<%= f.fields_for :estudio do |e| %>
-			<div class="row">
-				<div class="col-md-1">
+		<%= f.fields_for :estudiante do |et| %>
+			<%= et.fields_for :estudio do |e| %>
+				<div class="row">
+
+					<div class="col-md-3">
+						<p class="stylep">Estudio:</p>
+						<%=e.text_field(:Estudio,id:"Estudio",class:"form-control")%>
+						<!--<input type="text" name="Estudio" class="form-control"></input>-->
+					</div>
+					<div class="col-md-3">
+						<p class="stylep">Año:</p>
+						<%=e.text_field(:Anno,id:"Anno",class:"form-control")%>
+						<!--<input type="text" name="Ano" class="form-control"></input>-->
+					</div>
+					<div class="col-md-3">
+						<p class="stylep">Presedencia:</p>
+						<%=e.text_field(:Presedencia,id:"Presedencia",class:"form-control")%>
+						<!--<input type="text" name="Presedencia" class="form-control"></input>-->
+					</div>
+					<div class="col-md-3">
+						<p class="stylep">Tipo:</p>
+						<%=e.select(:tipoestudio,['Publico', 'Privado'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+						<!--<select name="" id="" class="form-control">
+							<option value="0">seleccione</option>
+						</select>-->
+					</div>
 				</div>
-				<div class="col-md-2">
-					<label style=" width: 150px;">Estudio:</label>
-					<%=e.text_field(:Estudio,id:"Estudio",class:"form-control")%>
-					<!--<input type="text" name="Estudio" class="form-control"></input>-->
-				</div>
-				<div class="col-md-2">
-					<label style=" width: 150px;">Año:</label>
-					<%=e.text_field(:Anno,id:"Anno",class:"form-control")%>
-					<!--<input type="text" name="Ano" class="form-control"></input>-->
-				</div>
-				<div class="col-md-2">
-					<label style=" width: 150px;">Presedencia:</label>
-					<%=e.text_field(:Presedencia,id:"Presedencia",class:"form-control")%>
-					<!--<input type="text" name="Presedencia" class="form-control"></input>-->
-				</div>
-				<div class="col-md-2">
-					<label style=" width: 150px;">Tipo:</label>
-					<%=e.select(:tipoestudio,['Publico', 'Privado'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
-					<!--<select name="" id="" class="form-control">
-						<option value="0">seleccione</option>
-					</select>-->
-				</div>
-			</div>
+			<%end%>
 		<%end%>
 		</div>
 	</div>
@@ -181,34 +200,30 @@
 		<div class="panel-body">
 		<%= f.fields_for :trabajo do |t| %>
 			<div class="row">
-				<div class="col-md-1">
-				</div>
-				<div class="col-md-2">
-					<label style=" width: 150px;">Centro de Trabajo:</label>
+				<div class="col-md-3">
+					<p class="stylep">Centro de Trabajo:</p>
 					<%=t.text_field(:Lugartrabajo,id:"Lugartrabajo",class:"form-control")%>
 					<!--<input type="text" name="Lugartrabajo" class="form-control"></input>-->
 				</div>
-				<div class="col-md-2">
-					<label style=" width: 150px;">Cargo:</label>
+				<div class="col-md-3">
+					<p class="stylep">Cargo:</p>
 					<%=t.text_field(:Cargo,id:"Cargo",class:"form-control")%>
 					<!--<input type="text" name="Cargo" class="form-control"></input>-->
 				</div>
-				<div class="col-md-2">
-					<label style=" width: 150px;">Tiempo:</label>
+				<div class="col-md-3">
+					<p class="stylep">Tiempo:</p>
 					<%=t.text_field(:Tiempo,id:"Tiempo",class:"form-control")%>
 					<!--<input type="text" name="Tiempo" class="form-control"></input>-->
 				</div>
-				<div class="col-md-2">
-					<label style=" width: 150px;">Telefono:</label>
-					<%=t.text_field(:Telefono,id:"Telefono",class:"form-control")%>
+				<div class="col-md-3">
+					<p class="stylep">Telefono:</p>
+					<%=t.telephone_field(:Telefono,id:"Telefono",class:"form-control")%>
 					<!--<input type="text" name="Telefono" class="form-control"></input>-->
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-1">
-				</div>
-				<div class="col-md-10">
-					<label style=" width: 150px;">Direccion:</label>
+				<div class="col-md-12">
+					<p class="stylep">Direccion:</p>
 					<%=t.text_area(:Direcciontrabajo,class:"form-control")%>
 					<!--<textarea type="text" name="Direcciontrabajo" class="form-control"></textarea>-->
 				</div>
@@ -226,20 +241,19 @@
 		<div class="panel-body">
 			
 			<div class="row">
-			    <div class="col-md-1">
-				</div>
-				<div class="col-md-2">
-				<label style=" width: 150px;">Cedula:</label>
+
+				<div class="col-md-3">
+				<p class="stylep">Cedula:</p>
 				<%=f.text_field(:cedulatutor1,id:"cedulatutor1",class:"form-control")%>
 				<!--<input type="text" name="cedulatutor1" class="form-control" placeholder="Digite la Cedula">-->
 				</div>
-				<div class="col-md-2">
-				<label style=" width: 150px;">Nombre:</label>
+				<div class="col-md-3">
+				<p class="stylep">Nombre:</p>
 				<%=f.text_field(:Nombretutor1,id:"Nombretutor1",class:"form-control")%>
 				<!--<input type="text" name="Nombretutor1" class="form-control"></input>-->
 				</div>
-				<div class="col-md-2">
-				<label style=" width: 150px;">Apellido:</label>
+				<div class="col-md-3">
+				<p class="stylep">Apellido:</p>
 				<%=f.text_field(:Apellidotutor1,id:"Apellidotutor1",class:"form-control")%>
 				<!--<input type="text" name="Apellidotutor1" class="form-control"></input>-->
 				</div>
@@ -249,22 +263,23 @@
 				<span data-toggle="modal" data-target="#MFamiliar"><%=icon('fa fa-pencil-square-o fa-lg')%></span>
 				<span data-toggle="modal" data-target="#MBusqueda"><%=icon('fa fa-search fa-lg')%></span>
 				</div>
-			</div>
-			<div class="row">
 				<div class="col-md-1">
 				</div>
-				<div class="col-md-2">
-				<label style=" width: 150px;">Cedula:</label>
+			</div>
+			<div class="row">
+
+				<div class="col-md-3">
+				<p class="stylep">Cedula:</p>
 				<%=f.text_field(:cedulatutor2,id:"cedulatutor2",class:"form-control")%>
 				<!--<input type="text" name="cedulatutor2" class="form-control" placeholder="Digite la Cedula">-->
 				</div>
-				<div class="col-md-2">
-				<label style=" width: 150px;">Nombre:</label>
+				<div class="col-md-3">
+				<p class="stylep">Nombre:</p>
 				<%=f.text_field(:Nombretutor2,id:"Nombretutor2",class:"form-control")%>
 				<!--<input type="text" name="Nombretutor2" class="form-control"></input>-->
 				</div>
-				<div class="col-md-2">
-				<label style=" width: 150px;">Apellido:</label>
+				<div class="col-md-3">
+				<p class="stylep">Apellido:</p>
 				<%=f.text_field(:Apellidotutor2,id:"Apellidotutor2",class:"form-control")%>
 				<!--<input type="text" name="Apellidotutor2" class="form-control"></input>-->
 				</div>
@@ -274,7 +289,18 @@
 				<span data-toggle="modal" data-target="#MFamiliar"><%=icon('fa fa-pencil-square-o fa-lg')%></span>
 				<span data-toggle="modal" data-target="#MBusqueda"><%=icon('fa fa-search fa-lg')%></span>
 				</div>
+				<div class="col-md-1">
+				</div>
 		    </div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading text-right">
+		<div class="form-group">
+			<a class="btn btn-danger">Cancelar </a>
+			<%= f.submit("Guardar",:class=>"btn btn-primary") %>
+		</div>
+			
 		</div>
 	</div>
 <%end%>
@@ -284,14 +310,14 @@
 	
 
 	<!-- Modal Formulario-->
-	<div class="modal fade" id="MFamiliar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="MFamiliar" tabindex="-1" role="dialog" aria-pledby="myModalp" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        <button type="button" class="close" data-dismiss="modal" aria-p="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
-	        <h4 class="modal-title" id="myModalLabel">Registro de Tutor</h4>
+	        <h4 class="modal-title" id="myModalp">Registro de Tutor</h4>
 	      </div>
 	      <div class="modal-body">
 	      <%=form_for(:estudiante,remote: true,:url=>{:action=>:create}) do |f|%>
@@ -299,17 +325,17 @@
 				<div class="col-md-10">
 					<div class="row">
 						<div class="col-md-4">
-						<label style=" width: 150px;">Primer Nombre:</label>
+						<p class="stylep">Primer Nombre:</p>
 						<%=f.text_field(:Primernombre,id:"Primernombre",class:"form-control")%>
 						<!--<input type="text" name="Primernombre" class="form-control">-->
 						</div>
 						<div class="col-md-4">
-						<label style=" width: 150px;">Segundo Nombre:</label>
+						<p class="stylep">Segundo Nombre:</p>
 						<%=f.text_field(:Segundornombre,id:"Segundornombre",class:"form-control")%>
 						<!--<input type="text" name="Segundornombre" class="form-control">-->
 						</div>
 						<div class="col-md-4">
-						<label style=" width: 150px;">Primer Apellido:</label>
+						<p class="stylep">Primer Apellido:</p>
 						<%=f.text_field(:Primerapellido,id:"Primerapellido",class:"form-control")%>
 						<!--<input type="text" name="Primerapellido" class="form-control">-->
 						</div>
@@ -317,12 +343,12 @@
 					<div class="row">
 						
 						<div class="col-md-4">
-						<label style=" width: 150px;">Segundo Apellido:</label>
+						<p class="stylep">Segundo Apellido:</p>
 						<%=f.text_field(:Segundoapellido,id:"Segundoapellido",class:"form-control")%>
 						<!--<input type="text" name="Segundoapellido" class="form-control">-->
 						</div>
 						<div class="col-md-4">
-						<label style=" width: 150px;">Edad:</label>
+						<p class="stylep">Edad:</p>
 						<%=f.text_field(:Edad,id:"Edad",class:"form-control")%>
 						<!--<input type="text" name="Edad" class="form-control">-->
 						</div>
@@ -334,42 +360,42 @@
 			</div>
 			<div class="row">
 				 <div class="col-md-12">
-				 <label style=" width: 150px;">Direccion:</label>
+				 <p class="stylep">Direccion:</p>
 				 <%=f.text_area(:Direccionestu,class:"form-control")%>
 				 <!--<textarea type="text" name="Direccionestu" class="form-control"></textarea>-->
 				 </div>
 			</div>
 			<div class="row">
 				 <div class="col-md-3">
-					 <label style=" width: 150px;">Tipo Sanguineo:</label>
+					 <p class="stylep">Tipo Sanguineo:</p>
 					 <%=f.select(:tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
 					 <!--<input type="text" name="tiposanguineo" class="form-control"></input>-->
 				 </div>
 				 <div class="col-md-3">
-					 <label style=" width: 150px;">Estado Civil:</label>
+					 <p class="stylep">Estado Civil:</p>
 					 <%=f.select(:Estadocivil,['Solter@', 'Casad@', 'Divorciad@', 'Viud@', 'Union de hechos'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
 					 <!--<input type="text" name="Estadocivil" class="form-control"></input>-->
 				 </div>
 				 <div class="col-md-3">
-					 <label style=" width: 150px;">Celular:</label>
+					 <p class="stylep">Celular:</p>
 					 <%=f.text_field(:Celular,id:"Celular",class:"form-control")%>
 					 <!--<input type="text" name="Celular" class="form-control"></input>-->
 				 </div>
 				 <div class="col-md-3">
-					 <label style=" width: 150px;">Telefono:</label>
-					 <%=f.text_field(:Telefono,id:"Telefono",class:"form-control")%>
+					 <p class="stylep">Telefono:</p>
+					 <%=f.telephone_field(:Telefono,id:"Telefono",class:"form-control")%>
 					 <!--<input type="text" name="Telefono" class="form-control"></input>-->
 				 </div>
 			</div>
 			<div class="row">
 				 <div class="col-md-3">
-					 <label style=" width: 150px;">Genero:</label>
+					 <p class="stylep">Genero:</p>
 					  <%=radio_button_tag(:Genero, "Masculino") %> Masculino <br>
 				 	  <%=radio_button_tag(:Genero, "Femenino") %> Femenino
 					 <!--<input type="text" name="Genero" class="form-control"></input>-->
 				 </div>
 				 <div class="col-md-3">
-				  <label style=" width: 150px;">Municipio:</label>
+				  <p class="stylep">Municipio:</p>
 				  <!--<select name="" id="" class="form-control">
 					  <option value="0">Seleccione</option>
 				  </select>-->
@@ -391,14 +417,14 @@
 	</div>
 
 	<!-- Modal Table -->
-	<div class="modal fade" id="MBusqueda" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="MBusqueda" tabindex="-1" role="dialog" aria-pledby="myModalp" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        <button type="button" class="close" data-dismiss="modal" aria-p="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
-	        <h4 class="modal-title" id="myModalLabel">Buscar Familiar</h4>
+	        <h4 class="modal-title" id="myModalp">Buscar Familiar</h4>
 	      </div>
 	      <div class="modal-body">
 			<div class="">

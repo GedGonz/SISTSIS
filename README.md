@@ -1,4 +1,5 @@
 # SISTSIS
+<<<<<<< HEAD
 Proyecto tsis
 
 public Stream GetStreamFile(string filePath)
@@ -15,3 +16,6 @@ public Stream GetStreamFile(string filePath)
 
  //mail.Attachments.Add(new Attachment(pdfpath, "application/pdf"));
     mail.Attachments.Add(new Attachment(GetStreamFile(pdfpath), Path.GetFileName(pdfpath), "application/pdf"));
+=======
+Proyecto TSIS
+>>>>>>> 9dae5b54ad3caaa0ff4dd36b5db45fae349f2403

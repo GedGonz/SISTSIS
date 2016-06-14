@@ -35,6 +35,8 @@ gem 'bootstrap_sb_admin_base_v2'
 #Gema para iconos y fuentes
 gem 'font-awesome-sass'
 
+#Gema para la tabla
+gem 'jquery-datatables-rails'
 
 #Gema para solucionar problemas con TurboLink y sus eventos
 #JavaScript.

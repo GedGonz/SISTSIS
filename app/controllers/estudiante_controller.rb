@@ -5,7 +5,8 @@ class EstudianteController < ApplicationController
   end
 
   def new
-    @Persona=Persona.all;
+    
+    @Persona=Padre.all;
   end
 
   def create

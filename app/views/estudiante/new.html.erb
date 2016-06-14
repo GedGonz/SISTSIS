@@ -1,5 +1,6 @@
 <br>
 <br>
+<%= javascript_include_tag "estudiante" %>
 <%=form_for(:persona,:url=>{:action=>:create}) do |f|%>
 	<div class="panel panel-default">
 		<div class="panel-heading paneltitle">
@@ -418,7 +419,7 @@
 
 	<!-- Modal Table -->
 	<div class="modal fade" id="MBusqueda" tabindex="-1" role="dialog" aria-pledby="myModalp" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
+	  <div class="modal-dialog tamanio" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-p="Close">
@@ -427,8 +428,8 @@
 	        <h4 class="modal-title" id="myModalp">Buscar Familiar</h4>
 	      </div>
 	      <div class="modal-body">
-			<div class="">
-				<table>
+
+				<table class="table table-hover" class="tablefind" id="tablefind">
 					<thead>
 						<tr>
 							<th>Codigo</th>
@@ -438,7 +439,6 @@
 							<th>Cedula</th>
 							<th>Edad</th>
 							<th>Celular</th>
-							<th>Direccion</th>
 							<th>Municipio</th>
 						</tr>
 					</thead>
@@ -446,19 +446,17 @@
 					<%@Persona.each do |p|%>
 						<tr>
 							<td><%=p.id%></td>
-							<td><%=p.Padres%></td>
-							<td><%=p.Primernombre%></td>
-							<td><%=p.Primerapellido%></td>
-							<td><%=p.Cedula%></td>
-							<td><%=p.Edad%></td>
-							<td><%=p.Celular%></td>
-							<td><%=p.Direccion%></td>
-							<td><%=p.Municipio%></td>
+							<td><%=p.Parentesco%></td>
+							<td><%=p.Persona.Primernombre%></td>
+							<td><%=p.Persona.Primerapellido%></td>
+							<td><%=p.Persona.Cedula%></td>
+							<td><%=p.Persona.Edad%></td>
+							<td><%=p.Persona.Celular%></td>
+							<td><%=p.Persona.Municipio.Municipio%></td>
 						</tr>
 					<%end%>
 					</tbody>
 				</table>
-			</div>
 	      </div>
 	      <div class="modal-footer">
 	      </div>

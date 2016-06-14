@@ -1,7 +1,7 @@
 <br>
 <br>
-<%= javascript_include_tag "estudiante" %>
-<%=form_for(:persona,:url=>{:action=>:create}) do |f|%>
+<%= javascript_include_tag "tablejs" %>
+<%=form_for(:persona,remote:true,:url=>{:action=>:createp}) do |f|%>
 	<div class="panel panel-default">
 		<div class="panel-heading paneltitle">
 			Datos Estudiante
@@ -15,12 +15,12 @@
 				<br>
 				<div class="row">
 					
-						<div class="col-md-4">
-						<p style=" width: 150px;" class="stylep">Nº Carnet:</p>
+					<div class="col-md-4">
+					<p style=" width: 150px;" class="stylep">Nº Carnet:</p>
 
-						<%=f.text_field(:NumCarnet,id:"NumCarnet",class:"form-control")%>
+					<%=f.text_field(:NumCarnet,id:"NumCarnet",class:"form-control")%>
 						<!--<input type="text" name="NumCarnet" class="form-control">-->
-						</div>
+					</div>
 
 					<div class="col-md-4">
 					<p  class="stylep">Primer Nombre:</p>
@@ -55,7 +55,6 @@
 			<div class="col-md-2">
 				<%= image_tag "adefault_user.png", :alt => "User",:class=>"PictureDefault", :title => "User"%>
 				<br>
-				
 
 				<div class="fileupload fileupload-new" data-provides="fileupload">
                          <span class="btn btn-default btn-group-justified btn-sm btn-file">
@@ -93,23 +92,23 @@
 		</div>
 		<div class="row">
 			 <div class="col-md-3">
-				 <p  class="stylep">Cedula:</p>
-				 <%=f.text_field(:Cedula,id:"Cedula",class:"form-control")%>
+			  <p  class="stylep">Cedula:</p>
+			  <%=f.text_field(:Cedula,id:"Cedula",class:"form-control")%>
 				 <!--<input type="text" name="Celular" class="form-control"></input>-->
 			 </div>
 			 <div class="col-md-3">
-				 <p class="stylep">Celular:</p>
-				 <%=f.text_field(:Celular,id:"Celular",class:"form-control")%>
+			 <p class="stylep">Celular:</p>
+			 <%=f.text_field(:Celular,id:"Celular",class:"form-control")%>
 				 <!--<input type="text" name="Celular" class="form-control"></input>-->
 			 </div>
 			 <div class="col-md-3">
-				 <p class="stylep">Telefono:</p>
-				 <%=f.telephone_field(:Telefono,id:"Telefono",class:"form-control")%>
+			 <p class="stylep">Telefono:</p>
+			 <%=f.telephone_field(:Telefono,id:"Telefono",class:"form-control")%>
 				 <!--<input type="text" name="Telefono" class="form-control"></input>-->
 			 </div>
 			 <div class="col-md-3">
-				 <p class="stylep">Tipo Sanguineo:</p>
-				<%=f.select(:tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+			 <p class="stylep">Tipo Sanguineo:</p>
+			 <%=f.select(:tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
 				 <!--<input type="text" name="tiposanguineo" class="form-control"></input>-->
 			 </div>
 			
@@ -120,29 +119,29 @@
 		<div class="row">
 
 			 <div class="col-md-3">
-				 <p class="stylep">Estado Civil:</p>
-				 <%=f.select(:Estadocivil,['Solter@', 'Casad@', 'Divorciad@', 'Viud@', 'Union de hechos'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+			 <p class="stylep">Estado Civil:</p>
+			 <%=f.select(:Estadocivil,['Solter@', 'Casad@', 'Divorciad@', 'Viud@', 'Union de hechos'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
 				 <!--<input type="text" name="Estadocivil" class="form-control"></input>-->
 			 </div>
 			 <div class="col-md-3">
-			  <p class="stylep">Pais:</p>
-			  <%=collection_select(:Pais, :id, Country.all,:id, :Pais,{},{:class=>"form-control"})%>
+			 <p class="stylep">Pais:</p>
+			 <%=collection_select(:Pais, :id, Country.all,:id, :Pais,{},{:class=>"form-control"})%>
 
 			  <!--<select name="" id="" class="form-control">
 				  <option value="0">Seleccione</option>
 			  </select>-->
 			 </div>
 			 <div class="col-md-3">
-			  <p class="stylep">Departamento:</p>
-			  <%=collection_select(:Departamento, :id, Departamento.all,:id, :Departamento,{},{:class=>"form-control"})%>
+			 <p class="stylep">Departamento:</p>
+			 <%=collection_select(:Departamento, :id, Departamento.all,:id, :Departamento,{},{:class=>"form-control"})%>
 
 			  <!--<select name="" id="" class="form-control">
 				  <option value="0">Seleccione</option>
 			  </select>-->
 			 </div>
 			 <div class="col-md-3">
-			  <p class="stylep">Municipio:</p>
-			  <%=collection_select(:Municipio, :id, Municipio.all,:id, :Municipio,{},{:class=>"form-control"})%>
+			 <p class="stylep">Municipio:</p>
+			 <%=collection_select(:Municipio, :id, Municipio.all,:id, :Municipio,{},{:class=>"form-control"})%>
 
 			  <!--<select name="" id="" class="form-control">
 				  <option value="0">Seleccione</option>
@@ -320,99 +319,110 @@
 	        </button>
 	        <h4 class="modal-title" id="myModalp">Registro de Tutor</h4>
 	      </div>
+	     <%=form_for(:persona,:url=>{:action=>:createf}) do |f|%>
 	      <div class="modal-body">
-	      <%=form_for(:estudiante,remote: true,:url=>{:action=>:create}) do |f|%>
-			<div class="row">
-				<div class="col-md-10">
-					<div class="row">
-						<div class="col-md-4">
-						<p class="stylep">Primer Nombre:</p>
-						<%=f.text_field(:Primernombre,id:"Primernombre",class:"form-control")%>
-						<!--<input type="text" name="Primernombre" class="form-control">-->
+	     
+				<div class="row">
+					<div class="col-md-10">
+						<div class="row">
+							<div class="col-md-4">
+							<p class="stylep">Primer Nombre:</p>
+							<%=f.text_field(:Primernombre,id:"Primernombre",class:"form-control")%>
+							<!--<input type="text" name="Primernombre" class="form-control">-->
+							</div>
+							<div class="col-md-4">
+							<p class="stylep">Segundo Nombre:</p>
+							<%=f.text_field(:Segundornombre,id:"Segundornombre",class:"form-control")%>
+							<!--<input type="text" name="Segundornombre" class="form-control">-->
+							</div>
+							<div class="col-md-4">
+							<p class="stylep">Primer Apellido:</p>
+							<%=f.text_field(:Primerapellido,id:"Primerapellido",class:"form-control")%>
+							<!--<input type="text" name="Primerapellido" class="form-control">-->
+							</div>
 						</div>
-						<div class="col-md-4">
-						<p class="stylep">Segundo Nombre:</p>
-						<%=f.text_field(:Segundornombre,id:"Segundornombre",class:"form-control")%>
-						<!--<input type="text" name="Segundornombre" class="form-control">-->
-						</div>
-						<div class="col-md-4">
-						<p class="stylep">Primer Apellido:</p>
-						<%=f.text_field(:Primerapellido,id:"Primerapellido",class:"form-control")%>
-						<!--<input type="text" name="Primerapellido" class="form-control">-->
+						<div class="row">
+							
+							<div class="col-md-4">
+							<p class="stylep">Segundo Apellido:</p>
+							<%=f.text_field(:Segundoapellido,id:"Segundoapellido",class:"form-control")%>
+							<!--<input type="text" name="Segundoapellido" class="form-control">-->
+							</div>
+							<div class="col-md-4">
+							<p class="stylep">Edad:</p>
+							<%=f.text_field(:Edad,id:"Edad",class:"form-control")%>
+							<!--<input type="text" name="Edad" class="form-control">-->
+							</div>
 						</div>
 					</div>
-					<div class="row">
-						
-						<div class="col-md-4">
-						<p class="stylep">Segundo Apellido:</p>
-						<%=f.text_field(:Segundoapellido,id:"Segundoapellido",class:"form-control")%>
-						<!--<input type="text" name="Segundoapellido" class="form-control">-->
-						</div>
-						<div class="col-md-4">
-						<p class="stylep">Edad:</p>
-						<%=f.text_field(:Edad,id:"Edad",class:"form-control")%>
-						<!--<input type="text" name="Edad" class="form-control">-->
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
+					<div class="col-md-2">
 					<%= image_tag "adefault_user.png", :alt => "User",:class=>"PictureDefault", :title => "User"%>
+
+						<div class="fileupload fileupload-new" data-provides="fileupload">
+		                         <span class="btn btn-default btn-group-justified btn-sm btn-file">
+		                           <span class="fileupload-new"> Photo</span>
+		                           <span class="fileupload-exists"> Change</span>
+		                           <%=f.file_field(:Imag,:id=>"uploadBtn") %>
+		                           </span>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				 <div class="col-md-12">
-				 <p class="stylep">Direccion:</p>
-				 <%=f.text_area(:Direccionestu,class:"form-control")%>
-				 <!--<textarea type="text" name="Direccionestu" class="form-control"></textarea>-->
-				 </div>
-			</div>
-			<div class="row">
-				 <div class="col-md-3">
-					 <p class="stylep">Tipo Sanguineo:</p>
-					 <%=f.select(:tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
-					 <!--<input type="text" name="tiposanguineo" class="form-control"></input>-->
-				 </div>
-				 <div class="col-md-3">
-					 <p class="stylep">Estado Civil:</p>
-					 <%=f.select(:Estadocivil,['Solter@', 'Casad@', 'Divorciad@', 'Viud@', 'Union de hechos'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
-					 <!--<input type="text" name="Estadocivil" class="form-control"></input>-->
-				 </div>
-				 <div class="col-md-3">
-					 <p class="stylep">Celular:</p>
-					 <%=f.text_field(:Celular,id:"Celular",class:"form-control")%>
-					 <!--<input type="text" name="Celular" class="form-control"></input>-->
-				 </div>
-				 <div class="col-md-3">
-					 <p class="stylep">Telefono:</p>
-					 <%=f.telephone_field(:Telefono,id:"Telefono",class:"form-control")%>
-					 <!--<input type="text" name="Telefono" class="form-control"></input>-->
-				 </div>
-			</div>
-			<div class="row">
-				 <div class="col-md-3">
-					 <p class="stylep">Genero:</p>
-					  <%=radio_button_tag(:Genero, "Masculino") %> Masculino <br>
-				 	  <%=radio_button_tag(:Genero, "Femenino") %> Femenino
-					 <!--<input type="text" name="Genero" class="form-control"></input>-->
-				 </div>
-				 <div class="col-md-3">
-				  <p class="stylep">Municipio:</p>
-				  <!--<select name="" id="" class="form-control">
-					  <option value="0">Seleccione</option>
-				  </select>-->
-				 <%=collection_select(:Municipio, :id, Municipio.all,:id, :Municipio,{},{:class=>"form-control"})%>
-				 </div>
-				 <div class="col-md-3">
-				 </div>
-				  <div class="col-md-3">
-				 </div>
-			</div>
-		  <%end%>
-	      </div>
-	      <div class="modal-footer">
+				<div class="row">
+					 <div class="col-md-12">
+					 <p class="stylep">Direccion:</p>
+					 <%=f.text_area(:Direccionestu,class:"form-control")%>
+					 <!--<textarea type="text" name="Direccionestu" class="form-control"></textarea>-->
+					 </div>
+				</div>
+				<div class="row">
+					 <div class="col-md-3">
+						 <p class="stylep">Tipo Sanguineo:</p>
+						 <%=f.select(:tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+						 <!--<input type="text" name="tiposanguineo" class="form-control"></input>-->
+					 </div>
+					 <div class="col-md-3">
+						 <p class="stylep">Estado Civil:</p>
+						 <%=f.select(:Estadocivil,['Solter@', 'Casad@', 'Divorciad@', 'Viud@', 'Union de hechos'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+						 <!--<input type="text" name="Estadocivil" class="form-control"></input>-->
+					 </div>
+					 <div class="col-md-3">
+						 <p class="stylep">Celular:</p>
+						 <%=f.text_field(:Celular,id:"Celular",class:"form-control")%>
+						 <!--<input type="text" name="Celular" class="form-control"></input>-->
+					 </div>
+					 <div class="col-md-3">
+						 <p class="stylep">Telefono:</p>
+						 <%=f.telephone_field(:Telefono,id:"Telefono",class:"form-control")%>
+						 <!--<input type="text" name="Telefono" class="form-control"></input>-->
+					 </div>
+				</div>
+				<div class="row">
+					 <div class="col-md-3">
+						 <p class="stylep">Genero:</p>
+						  <%=radio_button_tag(:Genero, "Masculino") %> Masculino <br>
+					 	  <%=radio_button_tag(:Genero, "Femenino") %> Femenino
+						 <!--<input type="text" name="Genero" class="form-control"></input>-->
+					 </div>
+					 <div class="col-md-3">
+					  <p class="stylep">Municipio:</p>
+					  <!--<select name="" id="" class="form-control">
+						  <option value="0">Seleccione</option>
+					  </select>-->
+					 <%=collection_select(:Municipio, :id, Municipio.all,:id, :Municipio,{},{:class=>"form-control"})%>
+					 </div>
+					 <div class="col-md-3">
+					 </div>
+					  <div class="col-md-3">
+					 </div>
+				</div>
+		 
+		  	<div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
+	        <%= f.submit("Guardar",:class=>"btn btn-primary") %>
 	      </div>
+	     <%end%>
+	      </div>
+
 	    </div>
 	  </div>
 	</div>

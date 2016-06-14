@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   # --------------------------------------------------------------------------------
   get 'estudiante/new'
 
-  post 'estudiante/create' =>'estudiante#create'
+  post 'estudiante/createp' =>'estudiante#createp'
+
+  post 'estudiante/createf' =>'estudiante#createf'
 
   #---------------------------------------------------------------------------------
   get 'home/index'

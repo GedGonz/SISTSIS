@@ -1,7 +1,7 @@
 <br>
 <br>
 <%= javascript_include_tag "tablejs" %>
-<%=form_for(:persona,remote:true,:url=>{:action=>:createp}) do |f|%>
+<%=form_for(@Persona,:url=>{:action=>:create}) do |f|%>
 	<div class="panel panel-default">
 		<div class="panel-heading paneltitle">
 			Datos Estudiante
@@ -18,7 +18,7 @@
 					<div class="col-md-4">
 					<p style=" width: 150px;" class="stylep">Nº Carnet:</p>
 
-					<%=f.text_field(:NumCarnet,id:"NumCarnet",class:"form-control")%>
+					<%=text_field(:NumCarnet,id:"NumCarnet",class:"form-control")%>
 						<!--<input type="text" name="NumCarnet" class="form-control">-->
 					</div>
 
@@ -29,7 +29,7 @@
 					</div>
 					<div class="col-md-4">
 					<p  class="stylep">Segundo Nombre:</p>
-					<%=f.text_field(:Segundornombre,id:"Segundornombre",class:"form-control")%>
+					<%=f.text_field(:Segundonombre,id:"Segundornombre",class:"form-control")%>
 					<!--<input type="text" name="Segundornombre" class="form-control">-->
 					</div>
 				</div>
@@ -75,7 +75,7 @@
 
 			 <div class="col-md-10">
 			 <p s class="stylep">Direccion:</p>
-			 <%=f.text_area(:Direccionestu,class:"form-control")%>
+			 <%=f.text_area(:Direccion,class:"form-control")%>
 			 <!--<textarea type="text" name="Direccionestu" class="form-control"></textarea>-->
 			 </div>
 
@@ -108,7 +108,7 @@
 			 </div>
 			 <div class="col-md-3">
 			 <p class="stylep">Tipo Sanguineo:</p>
-			 <%=f.select(:tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+			 <%=f.select(:Tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
 				 <!--<input type="text" name="tiposanguineo" class="form-control"></input>-->
 			 </div>
 			
@@ -244,17 +244,17 @@
 
 				<div class="col-md-3">
 				<p class="stylep">Cedula:</p>
-				<%=f.text_field(:cedulatutor1,id:"cedulatutor1",class:"form-control")%>
+				<%=text_field(:Cedula,id:"cedula",class:"form-control")%>
 				<!--<input type="text" name="cedulatutor1" class="form-control" placeholder="Digite la Cedula">-->
 				</div>
 				<div class="col-md-3">
 				<p class="stylep">Nombre:</p>
-				<%=f.text_field(:Nombretutor1,id:"Nombretutor1",class:"form-control")%>
+				<%=text_field(:Nombretutor1,id:"Nombretutor1",class:"form-control")%>
 				<!--<input type="text" name="Nombretutor1" class="form-control"></input>-->
 				</div>
 				<div class="col-md-3">
 				<p class="stylep">Apellido:</p>
-				<%=f.text_field(:Apellidotutor1,id:"Apellidotutor1",class:"form-control")%>
+				<%=text_field(:Apellidotutor1,id:"Apellidotutor1",class:"form-control")%>
 				<!--<input type="text" name="Apellidotutor1" class="form-control"></input>-->
 				</div>
 				<div class="col-md-2">
@@ -270,17 +270,17 @@
 
 				<div class="col-md-3">
 				<p class="stylep">Cedula:</p>
-				<%=f.text_field(:cedulatutor2,id:"cedulatutor2",class:"form-control")%>
+				<%=text_field(:cedulatutor2,id:"cedulatutor2",class:"form-control")%>
 				<!--<input type="text" name="cedulatutor2" class="form-control" placeholder="Digite la Cedula">-->
 				</div>
 				<div class="col-md-3">
 				<p class="stylep">Nombre:</p>
-				<%=f.text_field(:Nombretutor2,id:"Nombretutor2",class:"form-control")%>
+				<%=text_field(:Nombretutor2,id:"Nombretutor2",class:"form-control")%>
 				<!--<input type="text" name="Nombretutor2" class="form-control"></input>-->
 				</div>
 				<div class="col-md-3">
 				<p class="stylep">Apellido:</p>
-				<%=f.text_field(:Apellidotutor2,id:"Apellidotutor2",class:"form-control")%>
+				<%=text_field(:Apellidotutor2,id:"Apellidotutor2",class:"form-control")%>
 				<!--<input type="text" name="Apellidotutor2" class="form-control"></input>-->
 				</div>
 				<div class="col-md-2">
@@ -319,7 +319,7 @@
 	        </button>
 	        <h4 class="modal-title" id="myModalp">Registro de Tutor</h4>
 	      </div>
-	     <%=form_for(:persona,:url=>{:action=>:createf}) do |f|%>
+	     <%=form_for(@Persona,:url=>{:action=>:createf}) do |f|%>
 	      <div class="modal-body">
 	     
 				<div class="row">
@@ -327,12 +327,12 @@
 						<div class="row">
 							<div class="col-md-4">
 							<p class="stylep">Primer Nombre:</p>
-							<%=f.text_field(:Primernombre,id:"Primernombre",class:"form-control")%>
+							<%=f.text_field(:Primernombre,id:"primernombre",class:"form-control")%>
 							<!--<input type="text" name="Primernombre" class="form-control">-->
 							</div>
 							<div class="col-md-4">
 							<p class="stylep">Segundo Nombre:</p>
-							<%=f.text_field(:Segundornombre,id:"Segundornombre",class:"form-control")%>
+							<%=f.text_field(:Segundonombre,id:"Segundornombre",class:"form-control")%>
 							<!--<input type="text" name="Segundornombre" class="form-control">-->
 							</div>
 							<div class="col-md-4">
@@ -349,8 +349,13 @@
 							<!--<input type="text" name="Segundoapellido" class="form-control">-->
 							</div>
 							<div class="col-md-4">
-							<p class="stylep">Edad:</p>
+							<p class="stylep">Edado:</p>
 							<%=f.text_field(:Edad,id:"Edad",class:"form-control")%>
+							<!--<input type="text" name="Edad" class="form-control">-->
+							</div>
+							<div class="col-md-4">
+							<p class="stylep">Cedula:</p>
+							<%=f.text_field(:Cedula,id:"Cedula",class:"form-control")%>
 							<!--<input type="text" name="Edad" class="form-control">-->
 							</div>
 						</div>
@@ -370,14 +375,14 @@
 				<div class="row">
 					 <div class="col-md-12">
 					 <p class="stylep">Direccion:</p>
-					 <%=f.text_area(:Direccionestu,class:"form-control")%>
+					 <%=f.text_area(:Direccion,class:"form-control")%>
 					 <!--<textarea type="text" name="Direccionestu" class="form-control"></textarea>-->
 					 </div>
 				</div>
 				<div class="row">
 					 <div class="col-md-3">
 						 <p class="stylep">Tipo Sanguineo:</p>
-						 <%=f.select(:tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
+						 <%=f.select(:Tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>
 						 <!--<input type="text" name="tiposanguineo" class="form-control"></input>-->
 					 </div>
 					 <div class="col-md-3">
@@ -453,18 +458,7 @@
 						</tr>
 					</thead>
 					<tbody>
-					<%@Persona.each do |p|%>
-						<tr>
-							<td><%=p.id%></td>
-							<td><%=p.Parentesco%></td>
-							<td><%=p.Persona.Primernombre%></td>
-							<td><%=p.Persona.Primerapellido%></td>
-							<td><%=p.Persona.Cedula%></td>
-							<td><%=p.Persona.Edad%></td>
-							<td><%=p.Persona.Celular%></td>
-							<td><%=p.Persona.Municipio.Municipio%></td>
-						</tr>
-					<%end%>
+
 					</tbody>
 				</table>
 	      </div>
